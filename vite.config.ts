@@ -13,15 +13,31 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    minify: 'terser',
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           animations: ['framer-motion'],
-          ui: ['@radix-ui/react-slot', '@radix-ui/react-separator']
-        }
+          ui: ['@radix-ui/react-slot', '@radix-ui/react-separator', '@radix-ui/react-dialog'],
+          router: ['react-router-dom'],
+          supabase: ['@supabase/supabase-js']
+        },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+      }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
       }
     }
   },
-  base: '/'
+  base: '/',
+  server: {
+    port: 5173
+  }
 })

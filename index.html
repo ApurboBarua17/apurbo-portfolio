@@ -2,9 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/apurbo.jpeg" as="image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="icon" type="image/png" href="/logo-large.svg" />
     <link rel="apple-touch-icon" href="/logo-large.svg" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apurbo Barua - Software Engineer & AI/ML Enthusiast</title>
     <meta name="description" content="Personal portfolio website for Apurbo Barua - Software Engineer, AI/ML Enthusiast, and Full-Stack Developer" />
@@ -23,6 +32,10 @@
     <meta property="twitter:title" content="Apurbo Barua - Software Engineer & AI/ML Enthusiast" />
     <meta property="twitter:description" content="Personal portfolio website showcasing projects, experience, and skills in software engineering and AI/ML" />
     <meta property="twitter:image" content="/logo-large.svg" />
+    
+    <!-- Performance hints -->
+    <meta name="theme-color" content="#1a1a1a" />
+    <link rel="dns-prefetch" href="https://hepqrygzofhelyfrqrpy.supabase.co" />
   </head>
   <body class="dark">
     <div id="root"></div>
