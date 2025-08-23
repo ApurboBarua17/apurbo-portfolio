@@ -26,7 +26,14 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+        assetFileNames: (assetInfo) => {
+          // Keep images at root level to match our paths
+          if (assetInfo.name && /\.(png|jpe?g|gif|svg|webp)$/i.test(assetInfo.name)) {
+            return '[name].[ext]';
+          }
+          // Other assets go in subdirectories
+          return 'assets/[ext]/[name]-[hash].[ext]';
+        }
       }
     },
     terserOptions: {
@@ -39,5 +46,7 @@ export default defineConfig({
   base: '/',
   server: {
     port: 5173
-  }
+  },
+  // Ensure public assets are properly handled
+  publicDir: 'public'
 })
