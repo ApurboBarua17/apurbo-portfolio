@@ -29,8 +29,9 @@ function AppRoutes() {
 }
 
 export function Router() {
+  // Use the same base path that's configured in vite.config.ts
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/apurbo-portfolio">
       <AppRoutes />
     </BrowserRouter>
   );
