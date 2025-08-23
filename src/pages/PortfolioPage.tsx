@@ -19,7 +19,7 @@ const projects = [
 		githubUrl: '', // No GitHub repo for this deployed project
 		liveUrl: 'https://iamkimball.com/',
 		featured: true,
-		image: '/src/assets/DeltaChiWebsite.png',
+		image: '/DeltaChiWebsite.png',
 		imageAlt: 'Delta Chi alumni platform showing member dashboard and engagement features',
 	},
 	{
@@ -34,7 +34,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/RAG_chatbot',
 		liveUrl: '#',
 		featured: true,
-		image: '/src/assets/ragChatbot.png',
+		image: '/ragChatbot.png',
 		imageAlt: 'RAG Chatbot interface showing document processing',
 	},
 	{
@@ -48,7 +48,7 @@ const projects = [
 		category: 'Web Development',
 		githubUrl: 'https://github.com/ApurboBarua17/Website_status_checker',
 		liveUrl: '#',
-		image: '/src/assets/websiteChecker.png',
+		image: '/websiteChecker.png',
 		imageAlt: 'Website status dashboard with uptime metrics',
 	},
 	{
@@ -63,7 +63,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Sort_visualizer',
 		liveUrl: 'https://algovizualization.vercel.app/',
 		featured: true,
-		image: '/src/assets/algovizSortingAlgo.png',
+		image: '/algovizSortingAlgo.png',
 		imageAlt: 'Sorting algorithm visualization with animated bars',
 	},
 	{
@@ -77,7 +77,7 @@ const projects = [
 		category: 'Full-Stack',
 		githubUrl: 'https://github.com/apurbo-barua/recipe-hub', // You can update this later
 		liveUrl: '#',
-		image: '/src/assets/recipeSharing HUb.png',
+		image: '/recipeSharing HUb.png',
 		imageAlt: 'RecipeHub social platform showing recipe sharing interface',
 	},
 	{
@@ -92,7 +92,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Socioeconomic-Impact-on-Arrest-Patterns-A-Machine_Learning_Analysis',
 		liveUrl: '#',
 		featured: true,
-		image: '/src/assets/socioeconimic_project.png',
+		image: '/socioeconimic_project.png',
 		imageAlt: 'Data visualization charts showing socioeconomic patterns',
 	},
 	{
@@ -106,7 +106,7 @@ const projects = [
 		category: 'Social Impact',
 		githubUrl: 'https://github.com/ApurboBarua17/food-rescue-campus-connect-85d23610',
 		liveUrl: '#',
-		image: '/src/assets/campus-food.png',
+		image: '/campus-food.png',
 		imageAlt: 'Food rescue platform showing donation matching interface',
 	},
 	{
@@ -121,7 +121,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/2040',
 		liveUrl: '#',
 		featured: true,
-		image: '/src/assets/2048.png',
+		image: '/2048.png',
 		imageAlt: '2048 game interface showing numbered tiles and game grid',
 	},
 	{
@@ -136,7 +136,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Pomodoro_timer_react',
 		liveUrl: '#',
 		featured: true,
-		image: '/src/assets/pixel-pomodoro.png',
+		image: '/pixel-pomodoro.png',
 		imageAlt: 'Pomodoro timer interface with retro pixel art design and audio controls',
 	},
 	{
@@ -151,7 +151,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/digi_whiteboard',
 		liveUrl: '#',
 		featured: true,
-		image: '/src/assets/digiWhiteboard.png',
+		image: '/digiWhiteboard.png',
 		imageAlt: 'Digital whiteboard interface showing drawing tools and canvas with theme toggle',
 	},
 	{
@@ -181,7 +181,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Huffman_encoding',
 		liveUrl: '#',
 		featured: true,
-		image: '/src/assets/HuffmanEncodig.png',
+		image: '/HuffmanEncodig.png',
 		imageAlt: 'Huffman encoding messenger interface showing compression algorithm in action',
 	},
 ];
