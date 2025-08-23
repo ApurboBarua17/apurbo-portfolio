@@ -48,7 +48,7 @@ export function Footer() {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://linkedin.com/in/apurbo-barua"
+                  href="https://www.linkedin.com/in/apurbo-barua17/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-red-400 transition-colors duration-200"
@@ -57,7 +57,7 @@ export function Footer() {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://github.com/apurbo-barua"
+                  href="https://github.com/ApurboBarua17"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-red-400 transition-colors duration-200"

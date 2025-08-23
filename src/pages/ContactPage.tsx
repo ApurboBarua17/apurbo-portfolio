@@ -74,15 +74,15 @@ export function ContactPage() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/apurbo-barua",
-      href: "https://linkedin.com/in/apurbo-barua",
+      value: "linkedin.com/in/apurbo-barua17",
+      href: "https://www.linkedin.com/in/apurbo-barua17/",
       description: "Professional networking"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/apurbo-barua",
-      href: "https://github.com/apurbo-barua",
+      value: "github.com/ApurboBarua17",
+      href: "https://github.com/ApurboBarua17",
       description: "Code repositories and projects"
     }
   ];
