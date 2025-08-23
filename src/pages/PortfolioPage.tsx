@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { ScrollAnimation, StaggerAnimation } from '../components/ScrollAnimation';
+import { projectImages } from '../utils/projectImages';
 
 const projects = [
 	{
@@ -19,7 +20,7 @@ const projects = [
 		githubUrl: '', // No GitHub repo for this deployed project
 		liveUrl: 'https://iamkimball.com/',
 		featured: true,
-		image: '/DeltaChiWebsite.png',
+		image: projectImages.DeltaChiWebsite,
 		imageAlt: 'Delta Chi alumni platform showing member dashboard and engagement features',
 	},
 	{
@@ -34,7 +35,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/RAG_chatbot',
 		liveUrl: '#',
 		featured: true,
-		image: '/ragChatbot.png',
+		image: projectImages.ragChatbot,
 		imageAlt: 'RAG Chatbot interface showing document processing',
 	},
 	{
@@ -48,7 +49,7 @@ const projects = [
 		category: 'Web Development',
 		githubUrl: 'https://github.com/ApurboBarua17/Website_status_checker',
 		liveUrl: '#',
-		image: '/websiteChecker.png',
+		image: projectImages.websiteChecker,
 		imageAlt: 'Website status dashboard with uptime metrics',
 	},
 	{
@@ -63,7 +64,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Sort_visualizer',
 		liveUrl: 'https://algovizualization.vercel.app/',
 		featured: true,
-		image: '/algovizSortingAlgo.png',
+		image: projectImages.algovizSortingAlgo,
 		imageAlt: 'Sorting algorithm visualization with animated bars',
 	},
 	{
@@ -77,7 +78,7 @@ const projects = [
 		category: 'Full-Stack',
 		githubUrl: 'https://github.com/apurbo-barua/recipe-hub', // You can update this later
 		liveUrl: '#',
-		image: '/recipeSharing_Hub.png',
+		image: projectImages.recipeSharing_Hub,
 		imageAlt: 'RecipeHub social platform showing recipe sharing interface',
 	},
 	{
@@ -92,7 +93,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Socioeconomic-Impact-on-Arrest-Patterns-A-Machine_Learning_Analysis',
 		liveUrl: '#',
 		featured: true,
-		image: '/socioeconimic_project.png',
+		image: projectImages.socioeconimic_project,
 		imageAlt: 'Data visualization charts showing socioeconomic patterns',
 	},
 	{
@@ -106,7 +107,7 @@ const projects = [
 		category: 'Social Impact',
 		githubUrl: 'https://github.com/ApurboBarua17/food-rescue-campus-connect-85d23610',
 		liveUrl: '#',
-		image: '/campus-food.png',
+		image: projectImages.campusFood,
 		imageAlt: 'Food rescue platform showing donation matching interface',
 	},
 	{
@@ -121,7 +122,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/2040',
 		liveUrl: '#',
 		featured: true,
-		image: '/2048.png',
+		image: projectImages.game2048,
 		imageAlt: '2048 game interface showing numbered tiles and game grid',
 	},
 	{
@@ -136,7 +137,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Pomodoro_timer_react',
 		liveUrl: '#',
 		featured: true,
-		image: '/pixel-pomodoro.png',
+		image: projectImages.pixelPomodoro,
 		imageAlt: 'Pomodoro timer interface with retro pixel art design and audio controls',
 	},
 	{
@@ -151,7 +152,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/digi_whiteboard',
 		liveUrl: '#',
 		featured: true,
-		image: '/digiWhiteboard.png',
+		image: projectImages.digiWhiteboard,
 		imageAlt: 'Digital whiteboard interface showing drawing tools and canvas with theme toggle',
 	},
 	{
@@ -166,7 +167,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Book_review_website',
 		liveUrl: '#',
 		featured: true,
-		image: '/Book_review.png',
+		image: projectImages.bookReview,
 		imageAlt: 'BookVlog platform showing book review interface with community posts and theme selection',
 	},
 	{
@@ -181,7 +182,7 @@ const projects = [
 		githubUrl: 'https://github.com/ApurboBarua17/Huffman_encoding',
 		liveUrl: '#',
 		featured: true,
-		image: '/HuffmanEncodig.png',
+		image: projectImages.huffmanEncoding,
 		imageAlt: 'Huffman encoding messenger interface showing compression algorithm in action',
 	},
 ];
