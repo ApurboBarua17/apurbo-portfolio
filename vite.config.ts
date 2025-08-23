@@ -10,6 +10,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/apurbo-portfolio/',
   build: {
     outDir: 'dist',
     sourcemap: false,
@@ -43,7 +44,6 @@ export default defineConfig({
       }
     }
   },
-  base: '/',
   server: {
     port: 5173
   },
