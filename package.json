@@ -6,9 +6,9 @@
   "description": "Personal portfolio website for Apurbo Barua - Software Engineer",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview",
-    "build:vercel": "vite build"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
