@@ -18,6 +18,9 @@ build/
 # IDE and editor files
 .vscode/
 .idea/
+
+# Vercel
+.vercel/
 *.swp
 *.swo
 
@@ -49,3 +52,4 @@ pids
 # Temporary folders
 tmp/
 temp/
+.vercel
