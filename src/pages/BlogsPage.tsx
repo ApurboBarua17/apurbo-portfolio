@@ -11,7 +11,7 @@ const blogPosts = [
     excerpt: "Starting the new academic year with our incoming RA staff for Fall 2025. Looking forward to working with this dedicated team to support our Apache Santa Cruz residents.",
     date: "2025-08-22",
     tags: ["Leadership", "ResLife", "Community"],
-    imageUrl: "/RAStaff2025.JPG"
+    imageUrl: "/apurbo-portfolio/RAStaff2025.JPG"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const blogPosts = [
     excerpt: "Beginning my role as Resident Assistant for the 2025-2026 academic year at Apache Santa Cruz. Ready to support residents and build a positive community environment.",
     date: "2025-08-19",
     tags: ["RA", "ResLife", "Community"],
-    imageUrl: "/RAintroduction.PNG"
+    imageUrl: "/apurbo-portfolio/RAintroduction.PNG"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const blogPosts = [
     excerpt: "Wrapping up the academic year with our final wing meeting. Reflecting on the community we built and wishing our residents success in their future endeavors.",
     date: "2025-05-09",
     tags: ["ResLife", "Community", "Reflection"],
-    imageUrl: "/last_wing_meeting.JPG"
+    imageUrl: "/apurbo-portfolio/last_wing_meeting.JPG"
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const blogPosts = [
     excerpt: "Attending the Delta Chi centennial banquet celebrating 100 years of brotherhood. Connected with alumni and reflected on our fraternity's history and impact.",
     date: "2025-05-03",
     tags: ["Delta Chi", "Fraternity", "Milestone"],
-    imageUrl: "/rechartering.jpg"
+    imageUrl: "/apurbo-portfolio/rechartering.jpg"
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const blogPosts = [
     excerpt: "Our RA staff received the Staff of the Year award at the annual RA banquet. Proud to be part of a team recognized for dedication to resident support.",
     date: "2025-04-15",
     tags: ["Achievement", "ResLife", "Recognition"],
-    imageUrl: "/RAbanquetBestStaff.jpg"
+    imageUrl: "/apurbo-portfolio/RAbanquetBestStaff.jpg"
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const blogPosts = [
     excerpt: "Organized our spring scholarship dinner recognizing Delta Chi brothers who made Dean's List. Celebrating academic achievement with dinner at Red Lobster.",
     date: "2025-03-20",
     tags: ["Delta Chi", "Academics", "Achievement"],
-    imageUrl: "/Spring2025AcademicBanquet.JPG"
+    imageUrl: "/apurbo-portfolio/Spring2025AcademicBanquet.JPG"
   },
   {
     id: 7,
@@ -59,7 +59,7 @@ const blogPosts = [
     excerpt: "Completed a software engineer shadowing program at Microsoft in February. Gained valuable insights into the tech industry and software development practices.",
     date: "2025-02-15",
     tags: ["Career", "Technology", "Microsoft"],
-    imageUrl: "/MicrosoftShadow.jpg"
+    imageUrl: "/apurbo-portfolio/MicrosoftShadow.jpg"
   },
   {
     id: 8,
@@ -67,7 +67,7 @@ const blogPosts = [
     excerpt: "Hosted our fall semester scholarship dinner at Outback Steakhouse to recognize brothers who achieved Dean's List status during the semester.",
     date: "2024-11-10",
     tags: ["Delta Chi", "Academics", "Celebration"],
-    imageUrl: "/Fall2024AcademicBanquet.JPG"
+    imageUrl: "/apurbo-portfolio/Fall2024AcademicBanquet.JPG"
   },
   {
     id: 9,
@@ -75,7 +75,7 @@ const blogPosts = [
     excerpt: "Spent the summer of 2024 visiting family in Bangladesh. Reconnected with my roots, explored cultural heritage, and experienced the vibrant life of Dhaka and surrounding areas.",
     date: "2024-07-15",
     tags: ["Travel", "Culture", "Family"],
-    imageUrl: "/Summer24Bangladesh.jpg"
+    imageUrl: "/apurbo-portfolio/Summer24Bangladesh.jpg"
   },
   {
     id: 10,
@@ -83,7 +83,7 @@ const blogPosts = [
     excerpt: "Started the Fall 2024 semester with RA staff orientation and team building. Preparing to support Apache Santa Cruz residents for the upcoming academic year.",
     date: "2024-08-25",
     tags: ["ResLife", "Leadership", "TeamBuilding"],
-    imageUrl: "/RA2024.JPG"
+    imageUrl: "/apurbo-portfolio/RA2024.JPG"
   },
   {
     id: 11,
@@ -91,7 +91,7 @@ const blogPosts = [
     excerpt: "Participated in our Delta Chi chapter rechartering ceremony. A significant milestone for our chapter as we continue our fraternity's mission and values.",
     date: "2024-05-15",
     tags: ["Delta Chi", "Milestone", "Brotherhood"],
-    imageUrl: "/rechartering.jpg"
+    imageUrl: "/apurbo-portfolio/rechartering.jpg"
   },
   {
     id: 12,
@@ -99,7 +99,7 @@ const blogPosts = [
     excerpt: "Organized our spring scholarship dinner at Mr. Ann's restaurant to recognize Delta Chi brothers who achieved Dean's List honors during the semester.",
     date: "2024-04-10",
     tags: ["Delta Chi", "Academics", "Leadership"],
-    imageUrl: "/Spring2024Banquet.png"
+    imageUrl: "/apurbo-portfolio/Spring2024Banquet.png"
   },
   {
     id: 13,
@@ -107,7 +107,7 @@ const blogPosts = [
     excerpt: "Completed my initiation into Delta Chi fraternity in November 2023. Officially became a brother and began my journey with the chapter.",
     date: "2023-11-15",
     tags: ["Delta Chi", "Brotherhood", "Personal"],
-    imageUrl: "/BecomingMember.jpg"
+    imageUrl: "/apurbo-portfolio/BecomingMember.jpg"
   },
   {
     id: 14,
@@ -115,7 +115,7 @@ const blogPosts = [
     excerpt: "Visited San Francisco during spring break 2023 with friends. Explored the Golden Gate Bridge, Fisherman's Wharf, and various neighborhoods throughout the city.",
     date: "2023-03-15",
     tags: ["Travel", "Friends", "Adventure"],
-    imageUrl: "/SanFransisco.png"
+    imageUrl: "/apurbo-portfolio/SanFransisco.png"
   }
 ];
 

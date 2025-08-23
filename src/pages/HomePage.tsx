@@ -23,7 +23,7 @@ export function HomePage() {
       issuer: 'IBM',
       date: 'Jul 2025',
       credentialId: 'JFRCITYL2F8Y',
-      logo: '/ibm-logo.png', // You'll need to add this logo to your public folder
+      logo: '/apurbo-portfolio/ibm-logo.png', // You'll need to add this logo to your public folder
       link: 'https://www.coursera.org/account/accomplishments/specialization/JFRCITYL2F8Y?trk=public_profile_see-credential'
     },
     {
@@ -31,7 +31,7 @@ export function HomePage() {
       issuer: 'Amazon Web Services',
       date: 'Jun 2025',
       credentialId: 'RDY70QW0WKPI',
-      logo: '/aws-logo.png', // You'll need to add this logo to your public folder
+      logo: '/apurbo-portfolio/aws-logo.png', // You'll need to add this logo to your public folder
       link: 'https://www.coursera.org/account/accomplishments/verify/RDY70QW0WKPI?trk=public_profile_see-credential'
     },
     {
@@ -39,7 +39,7 @@ export function HomePage() {
       issuer: 'Amazon Web Services',
       date: 'Jun 2025',
       credentialId: 'W00TNWDF4MA9',
-      logo: '/aws-logo.png', // You'll need to add this logo to your public folder
+      logo: '/apurbo-portfolio/aws-logo.png', // You'll need to add this logo to your public folder
       link: 'https://www.coursera.org/account/accomplishments/specialization/W00TNWDF4MA9?trk=public_profile_see-credential'
     },
   ];
@@ -208,7 +208,7 @@ export function HomePage() {
                   <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-red-500/10 to-red-600/20">
                     {!imageError ? (
                       <ImageWithFallback
-                        src="/apurbo.jpeg"
+                        src="/apurbo-portfolio/apurbo.jpeg"
                         alt="Apurbo Barua"
                         className="w-full h-full object-cover object-center scale-110 hover:scale-115 transition-transform duration-500"
                         onError={() => setImageError(true)}
