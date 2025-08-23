@@ -77,7 +77,7 @@ const projects = [
 		category: 'Full-Stack',
 		githubUrl: 'https://github.com/apurbo-barua/recipe-hub', // You can update this later
 		liveUrl: '#',
-		image: '/recipeSharing HUb.png',
+		image: '/recipeSharing_Hub.png',
 		imageAlt: 'RecipeHub social platform showing recipe sharing interface',
 	},
 	{
