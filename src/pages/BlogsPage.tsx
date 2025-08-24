@@ -152,7 +152,7 @@ export function BlogsPage() {
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       style={{ 
-                        objectPosition: post.id === 2 ? '40% 70%' : '15% center'
+                        objectPosition: post.id === 1 ? '30% center' : post.id === 2 ? '80% 75%' : '5% center'
                       }}
                       onError={(e) => {
                         // Fallback to emoji if image fails to load
