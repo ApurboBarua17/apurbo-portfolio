@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function Footer() {
@@ -95,7 +95,7 @@ export function Footer() {
             <div className="space-y-4">
               <h4 className="font-semibold text-white">Let's Work Together</h4>
               <p className="text-white text-sm">
-                Seeking Summer 2025 internships in Software Engineering, AI/ML, or Data Science.
+                Seeking Summer 2026 internships in Software Engineering, AI/ML, or Data Science.
               </p>
               <Button 
                 onClick={() => scrollToSection('contact')}
@@ -111,9 +111,7 @@ export function Footer() {
         <div className="border-t border-red-500/20 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div className="flex items-center space-x-2 text-white text-sm">
-              <span>© {currentYear} Apurbo Barua. Made with</span>
-              <Heart className="h-4 w-4 text-red-500" />
-              <span>using React & TailwindCSS</span>
+              <span>© {currentYear} Apurbo Barua</span>
             </div>
             
             <Button
