@@ -8,7 +8,7 @@ export function ResumeSection() {
   const handleDownloadResume = () => {
     // In a real application, this would download the actual resume PDF
     const link = document.createElement('a');
-    link.href = '/resume-apurbo-barua.pdf'; // This would be the actual PDF path
+    link.href = '/apurbo-portfolio/APURBO_RESUME.pdf'; // Updated with correct PDF path
     link.download = 'Apurbo_Barua_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -17,7 +17,7 @@ export function ResumeSection() {
 
   const handleViewResume = () => {
     // In a real application, this would open the PDF in a new tab
-    window.open('/resume-apurbo-barua.pdf', '_blank');
+    window.open('/apurbo-portfolio/APURBO_RESUME.pdf', '_blank');
   };
 
   return (

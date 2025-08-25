@@ -8,7 +8,7 @@ export function ResumePage() {
   const handleDownloadPDF = () => {
     // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/APURBO_BARUA.pdf'; // Updated to use your PDF filename
+    link.href = '/apurbo-portfolio/APURBO_RESUME.pdf'; // Updated to use your PDF filename with the correct path
     link.download = 'Apurbo_Barua_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -17,7 +17,7 @@ export function ResumePage() {
 
   const handleViewOnline = () => {
     // Open the PDF in a new tab
-    window.open('/APURBO_BARUA.pdf', '_blank');
+    window.open('/apurbo-portfolio/APURBO_RESUME.pdf', '_blank');
   };
 
   return (
