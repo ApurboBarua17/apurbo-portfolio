@@ -14,7 +14,7 @@ export function HomePage() {
     { number: '3+', label: 'Years Programming' },
     { number: '15+', label: 'Technologies' },
     { number: '9+', label: 'Projects Completed' },
-    { number: '300+', label: 'Students Mentored' },
+    { number: '600+', label: 'Students Mentored' },
   ];
 
   const certifications = [
@@ -119,7 +119,7 @@ export function HomePage() {
                     <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-green-400 rounded-full pulse-glow"></div>
                       <p className="text-foreground font-medium">
-                        Actively seeking Summer 2025 internships in
+                        Actively seeking Summer 2026 internships in
                       </p>
                     </div>
                     <div className="mt-2 flex flex-wrap gap-2">
