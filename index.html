@@ -9,6 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
+    <!-- Redirect script for GitHub Pages SPA routing -->
+    <script>
+      // Check if redirected from 404.html with path info in sessionStorage
+      (function() {
+        const redirectPath = sessionStorage.getItem('redirect_path');
+        if (redirectPath) {
+          sessionStorage.removeItem('redirect_path');
+          // Get the base path
+          const basePath = '/apurbo-portfolio';
+          history.replaceState(null, null, basePath + redirectPath);
+        }
+      })();
+    </script>
+    
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/apurbo-portfolio/logo.svg" />
     <link rel="icon" type="image/png" href="/apurbo-portfolio/logo-large.svg" />

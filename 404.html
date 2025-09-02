@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // This script checks if we have ?path= in the URL and if not, it adds the current path
+    // to sessionStorage and redirects to the root with ?path=
+    const currentPath = window.location.pathname;
+    const currentQueryParams = window.location.search;
+    
+    // GitHub Pages serves your site at /repository-name/ or custom domain
+    const repoName = '/apurbo-portfolio/';
+    
+    // Check if we're already at the root with a ?path parameter
+    const pathRegex = new RegExp(`^${repoName}(?:[?].*)?$`);
+    if (!pathRegex.test(currentPath)) {
+      // We're on a subpage that 404'd, store the path and redirect
+      const path = currentPath.replace(repoName, '');
+      sessionStorage.setItem('redirect_path', path + currentQueryParams);
+      window.location.href = repoName;
+    } else if (sessionStorage.getItem('redirect_path')) {
+      // We've been redirected to the root, now navigate to the correct route
+      const redirectPath = sessionStorage.getItem('redirect_path');
+      sessionStorage.removeItem('redirect_path');
+      window.location.replace(repoName + redirectPath);
+    }
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+  <p>If you are not redirected automatically, please click <a href="/apurbo-portfolio/">here</a>.</p>
+</body>
+</html>
