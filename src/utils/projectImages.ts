@@ -11,6 +11,7 @@ import pixelPomodoro from '../assets/pixel-pomodoro.png';
 import digiWhiteboard from '../assets/digiWhiteboard.png';
 import bookReview from '../assets/Book_review.png';
 import huffmanEncoding from '../assets/HuffmanEncodig.png';
+import portfolioWebsite from '../assets/portfolio.png';
 
 // Export all project images
 export const projectImages = {
@@ -26,6 +27,7 @@ export const projectImages = {
   digiWhiteboard,
   bookReview,
   huffmanEncoding,
+  portfolioWebsite,
 };
 
 // Helper function to get image by name

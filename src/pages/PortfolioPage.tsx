@@ -25,18 +25,18 @@ const projects = [
 	},
 	{
 		id: 2,
-		title: 'RAG Chatbot',
+		title: 'Sort Visualizer',
 		description:
-			'End-to-end NLP pipeline for PDF, CSV, and web ingestion with semantic search capabilities using advanced AI models and vector databases.',
+			'Interactive educational tool with animated visualizations of sorting algorithms and complexity analysis.',
 		longDescription:
-			'Built a sophisticated Retrieval-Augmented Generation chatbot that can process multiple document formats and provide contextual responses. Features include document parsing, embedding generation, semantic search, and conversational AI capabilities.',
-		tech: ['Python', 'LangChain', 'PyTorch', 'IBM Slate', 'Vector DB', 'FastAPI'],
-		category: 'AI/ML',
-		githubUrl: 'https://github.com/ApurboBarua17/RAG_chatbot',
-		liveUrl: '#',
+			'Educational platform that helps students understand sorting algorithms through interactive visualizations. Features step-by-step animations, complexity comparisons, and customizable data sets.',
+		tech: ['Python', 'Pygame', 'Algorithms', 'Data Structures'],
+		category: 'Education',
+		githubUrl: 'https://github.com/ApurboBarua17/Sort_visualizer',
+		liveUrl: 'https://algovizualization.vercel.app/',
 		featured: true,
-		image: projectImages.ragChatbot,
-		imageAlt: 'RAG Chatbot interface showing document processing',
+		image: projectImages.algovizSortingAlgo,
+		imageAlt: 'Sorting algorithm visualization with animated bars',
 	},
 	{
 		id: 3,
@@ -185,6 +185,21 @@ const projects = [
 		image: projectImages.huffmanEncoding,
 		imageAlt: 'Huffman encoding messenger interface showing compression algorithm in action',
 	},
+	{
+		id: 12,
+		title: 'Personal Portfolio Website',
+		description:
+			'Modern responsive portfolio website built with React, TypeScript, and Tailwind CSS featuring smooth animations, dark mode, and interactive project showcases.',
+		longDescription:
+			'A fully responsive, modern portfolio website built with React, TypeScript, and Tailwind CSS. Features include smooth page transitions with Framer Motion animations, a responsive design that works across all device sizes, interactive project showcases with filtering capabilities, and integrated contact form with validation. The site demonstrates front-end development expertise with a focus on clean design, accessibility, performance optimization, and user experience.',
+		tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite', 'Responsive Design', 'UI/UX'],
+		category: 'Web Development',
+		githubUrl: 'https://github.com/ApurboBarua17/apurbo-portfolio',
+		liveUrl: 'https://apurbobarua17.github.io/apurbo-portfolio/',
+		featured: true,
+		image: projectImages.portfolioWebsite,
+		imageAlt: 'Personal portfolio website showcasing projects, skills and experience',
+	},
 ];
 
 const categories = [
@@ -304,20 +319,26 @@ export function PortfolioPage() {
 												<Badge className="bg-red-600 text-white">Featured</Badge>
 											</div>
 											<div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
-												<Button
-													size="sm"
-													variant="secondary"
-													className="bg-card/90"
-												>
-													<Github className="h-4 w-4" />
-												</Button>
-												<Button
-													size="sm"
-													variant="secondary"
-													className="bg-card/90"
-												>
-													<ExternalLink className="h-4 w-4" />
-												</Button>
+												{project.githubUrl && (
+													<Button
+														size="sm"
+														variant="secondary"
+														className="bg-card/90"
+														onClick={() => window.open(project.githubUrl, '_blank')}
+													>
+														<Github className="h-4 w-4" />
+													</Button>
+												)}
+												{project.liveUrl !== '#' && (
+													<Button
+														size="sm"
+														variant="secondary"
+														className="bg-card/90"
+														onClick={() => window.open(project.liveUrl, '_blank')}
+													>
+														<ExternalLink className="h-4 w-4" />
+													</Button>
+												)}
 											</div>
 										</div>
 
