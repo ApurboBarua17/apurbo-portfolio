@@ -9,39 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Single Page App routing fix for GitHub Pages -->
-    <script>
-      // This script checks if we're coming from a 404 redirect with a path encoded in the URL
-      (function() {
-        // Get the search string from the URL
-        const search = window.location.search;
-        
-        // Check if the search starts with '?/'
-        if (search && search.indexOf('?/') === 0) {
-          // Extract the path from the query parameter
-          const pathFragment = search.substr(2); // Remove the '?/'
-          
-          // Split off any other query parameters
-          let path = pathFragment;
-          let restOfSearch = '';
-          
-          if (pathFragment.indexOf('&') !== -1) {
-            const parts = pathFragment.split('&');
-            path = parts[0];
-            restOfSearch = '?' + parts.slice(1).join('&');
-          }
-          
-          // Set the router path for our app to use
-          window.routerBasePath = '/' + path;
-          
-          // Clean up the URL
-          const basePath = '/apurbo-portfolio';
-          const cleanUrl = basePath + '/' + path + restOfSearch;
-          window.history.replaceState(null, null, cleanUrl);
-        }
-      })();
-    </script>
-    
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/apurbo-portfolio/logo.svg" />
     <link rel="icon" type="image/png" href="/apurbo-portfolio/logo-large.svg" />
@@ -69,11 +36,11 @@
     <!-- Performance hints -->
     <meta name="theme-color" content="#1a1a1a" />
     <link rel="dns-prefetch" href="https://hepqrygzofhelyfrqrpy.supabase.co" />
-    <script type="module" crossorigin src="/apurbo-portfolio/assets/js/index-636870ec.js"></script>
+    <script type="module" crossorigin src="/apurbo-portfolio/assets/js/index-124f9cec.js"></script>
     <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/vendor-79b9f383.js">
     <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/animations-8cd27180.js">
     <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/ui-26e49838.js">
-    <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/router-ab299e06.js">
+    <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/router-f26dc94b.js">
     <link rel="stylesheet" href="/apurbo-portfolio/assets/css/index-1f674faf.css">
   </head>
   <body class="dark">
