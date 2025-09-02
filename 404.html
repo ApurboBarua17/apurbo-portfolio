@@ -5,22 +5,36 @@
   <title>Page Not Found</title>
   <script>
     // Single Page App routing fix for GitHub Pages
-    // Technique based on https://github.com/rafgraph/spa-github-pages
     
-    // The repository name (or custom domain if you're using one)
-    const pathSegmentsToKeep = 1; // Adjust this if your site is in a subdirectory
+    // The repository name
+    const repoName = 'apurbo-portfolio';
     
+    // Get the current path including the repo name
+    const path = window.location.pathname;
+    const repoPath = '/' + repoName + '/';
+    
+    // Get location details
     const loc = window.location;
     
-    // Redirect to the index.html with the full path in the URL
-    const newUrl = loc.protocol + '//' + loc.hostname + (loc.port ? ':' + loc.port : '') + 
-      loc.pathname.split('/').slice(0, pathSegmentsToKeep + 1).join('/') + '/?/' + 
-      loc.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/') +
-      (loc.search ? '&' + loc.search.slice(1) : '') +
-      (loc.hash || '');
-    
-    // Redirect immediately to the new URL with path info
-    window.location.replace(newUrl);
+    // Only do the redirect if we're in a path that should be handled by the router
+    if (path.indexOf(repoPath) === 0) {
+      // Extract the part after the repo name
+      const routePath = path.substr(repoPath.length);
+      
+      // Create the redirect URL with the route embedded in the query string
+      const redirectTo = loc.protocol + '//' + loc.hostname + 
+        (loc.port ? ':' + loc.port : '') + 
+        repoPath + '?/' + routePath +
+        (loc.search ? '&' + loc.search.substr(1) : '') +
+        (loc.hash || '');
+      
+      // Redirect to the new URL
+      window.location.replace(redirectTo);
+    } else {
+      // Not in our repo path, just go to the homepage
+      window.location.replace(loc.protocol + '//' + loc.hostname + 
+        (loc.port ? ':' + loc.port : '') + repoPath);
+    }
   </script>
 </head>
 <body>
