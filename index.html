@@ -9,16 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Redirect script for GitHub Pages SPA routing -->
+    <!-- Single Page App routing fix for GitHub Pages -->
     <script>
-      // Check if redirected from 404.html with path info in sessionStorage
+      // This script checks if we're coming from a 404 redirect with a path encoded in the URL
       (function() {
-        const redirectPath = sessionStorage.getItem('redirect_path');
-        if (redirectPath) {
-          sessionStorage.removeItem('redirect_path');
-          // Get the base path
-          const basePath = '/apurbo-portfolio';
-          history.replaceState(null, null, basePath + redirectPath);
+        // Parse the URL
+        const l = window.location;
+        
+        // If we're coming from a redirect, we'll have a URL like:
+        // https://example.com/repo/?/some/path
+        if (l.search && l.search.includes('?/')) {
+          // Extract the path from the URL
+          const path = l.search.replace('?/', '/');
+          
+          // Split the path from additional query parameters
+          const segments = path.includes('&') ? path.split('&') : [path, ''];
+          const cleanPath = segments[0];
+          
+          // Reconstruct the URL without the encoded path
+          const remainingParams = segments.slice(1).join('&');
+          const cleanSearch = remainingParams ? '?' + remainingParams : '';
+          
+          // Replace the current URL with the clean one to enable normal routing
+          window.history.replaceState(
+            null, null, 
+            l.pathname.split('?')[0] + cleanSearch + (l.hash || '')
+          );
+          
+          // Update the route for React Router
+          window.routerBasePath = cleanPath;
         }
       })();
     </script>
@@ -50,7 +69,7 @@
     <!-- Performance hints -->
     <meta name="theme-color" content="#1a1a1a" />
     <link rel="dns-prefetch" href="https://hepqrygzofhelyfrqrpy.supabase.co" />
-    <script type="module" crossorigin src="/apurbo-portfolio/assets/js/index-011423ef.js"></script>
+    <script type="module" crossorigin src="/apurbo-portfolio/assets/js/index-7ef33ddb.js"></script>
     <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/vendor-79b9f383.js">
     <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/animations-8cd27180.js">
     <link rel="modulepreload" crossorigin href="/apurbo-portfolio/assets/js/ui-26e49838.js">
