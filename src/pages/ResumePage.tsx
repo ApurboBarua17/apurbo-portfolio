@@ -65,17 +65,17 @@ export function ResumePage() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
-            <Card className="glass-card border-red-500/20 p-8">
+            <Card className="glass-card border-red-500/20 p-10 sm:p-12 text-lg">
               {/* Header Section */}
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-2 text-white">Apurbo Barua</h2>
-                <p className="text-lg text-red-400 font-medium mb-4">
-                  Aspiring Software Engineer | CS Student | AI/ML Enthusiast
+                <h2 className="text-5xl font-bold mb-2 text-white">Apurbo Barua</h2>
+                <p className="text-2xl text-red-400 font-medium mb-4">
+                  Software Engineer | CS Graduate @ University of Arizona | AI/ML Engineer
                 </p>
-                
-                <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
+
+                <div className="flex flex-wrap justify-center gap-6 text-lg text-white">
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4" />
                     <span>apurboctgs11@gmail.com</span>
@@ -86,11 +86,11 @@ export function ResumePage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Linkedin className="w-4 h-4" />
-                    <span>linkedin.com/in/apurbo-barua</span>
+                    <span>linkedin.com/in/apurbo-barua17</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Github className="w-4 h-4" />
-                    <span>github.com/apurbo-barua</span>
+                    <span>github.com/ApurboBarua17</span>
                   </div>
                 </div>
               </div>
@@ -98,18 +98,18 @@ export function ResumePage() {
               <div className="border-t border-red-500/20 pt-8">
                 {/* Education */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-bold text-red-400 mb-4">Education</h3>
+                  <h3 className="text-3xl font-bold text-red-400 mb-4">Education</h3>
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h4 className="font-semibold text-white">Bachelor of Science in Computer Science</h4>
-                          <p className="text-white">University of Arizona</p>
+                          <h4 className="text-xl font-semibold text-white">Bachelor of Science in Computer Science</h4>
+                          <p className="text-lg text-white">University of Arizona</p>
                         </div>
-                        <span className="text-sm text-white">Expected May 2026</span>
+                        <span className="text-lg text-white">Graduated May 2026</span>
                       </div>
-                      <p className="text-sm text-white">
-                        Relevant Coursework: Data Structures, Algorithms, Software Engineering, 
+                      <p className="text-lg text-white">
+                        Relevant Coursework: Data Structures, Algorithms, Software Engineering,
                         Machine Learning, Database Systems, Web Development
                       </p>
                     </div>
@@ -118,50 +118,49 @@ export function ResumePage() {
 
                 {/* Experience */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-bold text-red-400 mb-4">Experience</h3>
+                  <h3 className="text-3xl font-bold text-red-400 mb-4">Experience</h3>
                   <div className="space-y-6">
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h4 className="font-semibold text-white">Software Engineer Intern</h4>
-                          <p className="text-red-300">EduTrend</p>
+                          <h4 className="text-xl font-semibold text-white">Software Engineer Intern</h4>
+                          <p className="text-lg text-red-300">PwC (through Eller Immersion Project Office / EPO)</p>
                         </div>
-                        <span className="text-sm text-white">Jul 2025 – Present</span>
+                        <span className="text-lg text-white">Jan 2026 – May 2026</span>
                       </div>
-                      <ul className="list-disc list-inside text-white text-sm space-y-1 ml-4">
-                        <li>Developed full-stack applications using React and Node.js</li>
-                        <li>Implemented CI/CD pipelines reducing deployment time by 40%</li>
-                        <li>Collaborated with cross-functional teams on product development</li>
+                      <ul className="list-disc list-inside text-white text-lg space-y-1 ml-4">
+                        <li>Architected a full-stack workforce planning platform (React, TypeScript, Node.js, AWS RDS PostgreSQL) consolidating 5 enterprise systems into a unified dashboard, deployed on AWS EC2</li>
+                        <li>Built an agentic AI chatbot using Claude 3 Haiku via AWS Bedrock with a dual-pass engine that generates and executes live SQL</li>
+                        <li>Developed an XGBoost model with SHAP explainability to predict project extension risk</li>
                       </ul>
                     </div>
 
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h4 className="font-semibold text-white">Undergraduate Teaching Assistant</h4>
-                          <p className="text-red-300">CS 110 - University of Arizona</p>
+                          <h4 className="text-xl font-semibold text-white">Software Engineer Intern</h4>
+                          <p className="text-lg text-red-300">EduTrend (Quanticore LLC)</p>
                         </div>
-                        <span className="text-sm text-white">Dec 2023 – Present</span>
+                        <span className="text-lg text-white">Aug 2025 – Dec 2025</span>
                       </div>
-                      <ul className="list-disc list-inside text-white text-sm space-y-1 ml-4">
-                        <li>Mentored 300+ students in programming fundamentals</li>
-                        <li>Designed interactive dashboards reducing failure rate by 22%</li>
-                        <li>Conducted weekly lab sessions and office hours</li>
+                      <ul className="list-disc list-inside text-white text-lg space-y-1 ml-4">
+                        <li>Designed GraphQL schemas, resolvers, and MongoDB service layers in a TypeScript mobile backend</li>
+                        <li>Built secure auth and role-based access control using Clerk with OAuth login flows</li>
+                        <li>Resolved GitHub Actions CI/CD pipeline failures</li>
                       </ul>
                     </div>
 
                     <div>
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <h4 className="font-semibold text-white">Resident Assistant</h4>
-                          <p className="text-red-300">University of Arizona</p>
+                          <h4 className="text-xl font-semibold text-white">Undergraduate Teaching Assistant (CS 110)</h4>
+                          <p className="text-lg text-red-300">University of Arizona</p>
                         </div>
-                        <span className="text-sm text-white">Aug 2024 – Present</span>
+                        <span className="text-lg text-white">Jan 2024 – May 2026</span>
                       </div>
-                      <ul className="list-disc list-inside text-white text-sm space-y-1 ml-4">
-                        <li>Led 'Late-Night Study Hub' with 35+ weekly attendees</li>
-                        <li>Resolved student disputes and crisis situations</li>
-                        <li>Boosted event participation by 65% through innovative programming</li>
+                      <ul className="list-disc list-inside text-white text-lg space-y-1 ml-4">
+                        <li>Built Python automation scripts for grading, cutting manual evaluation time by 10+ hours/week</li>
+                        <li>Taught data structures and algorithms to 150+ students per semester</li>
                       </ul>
                     </div>
                   </div>
@@ -169,12 +168,12 @@ export function ResumePage() {
 
                 {/* Skills */}
                 <section className="mb-8">
-                  <h3 className="text-xl font-bold text-red-400 mb-4">Technical Skills</h3>
+                  <h3 className="text-3xl font-bold text-red-400 mb-4">Technical Skills</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium text-white mb-2">Programming Languages</h4>
+                      <h4 className="text-xl font-medium text-white mb-2">Programming Languages</h4>
                       <div className="flex flex-wrap gap-2">
-                        {['Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'SQL'].map((skill) => (
+                        {['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C++'].map((skill) => (
                           <Badge key={skill} variant="secondary" className="bg-red-500/10 text-red-400 border-red-500/30">
                             {skill}
                           </Badge>
@@ -182,9 +181,9 @@ export function ResumePage() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">Frameworks & Libraries</h4>
+                      <h4 className="text-xl font-medium text-white mb-2">Frameworks & Libraries</h4>
                       <div className="flex flex-wrap gap-2">
-                        {['React', 'Node.js', 'Express', 'Django', 'Flask', 'TailwindCSS'].map((skill) => (
+                        {['React', 'Node.js', 'Express', 'Django', 'FastAPI', 'GraphQL', 'TailwindCSS'].map((skill) => (
                           <Badge key={skill} variant="secondary" className="bg-red-500/10 text-red-400 border-red-500/30">
                             {skill}
                           </Badge>
@@ -192,9 +191,19 @@ export function ResumePage() {
                       </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">Tools & Technologies</h4>
+                      <h4 className="text-xl font-medium text-white mb-2">AI / ML</h4>
                       <div className="flex flex-wrap gap-2">
-                        {['Git', 'Docker', 'AWS', 'MongoDB', 'PostgreSQL', 'Firebase'].map((skill) => (
+                        {['XGBoost', 'SHAP', 'scikit-learn', 'PyTorch', 'LangChain', 'RAG', 'Claude API', 'AWS Bedrock', 'Groq (Llama 3)', 'Chroma'].map((skill) => (
+                          <Badge key={skill} variant="secondary" className="bg-red-500/10 text-red-400 border-red-500/30">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-medium text-white mb-2">Cloud, Data & Tools</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {['AWS (EC2, RDS, Bedrock, Lambda)', 'PostgreSQL', 'MongoDB', 'Firebase', 'Docker', 'Git', 'GitHub Actions', 'Clerk (OAuth)'].map((skill) => (
                           <Badge key={skill} variant="secondary" className="bg-red-500/10 text-red-400 border-red-500/30">
                             {skill}
                           </Badge>
@@ -206,27 +215,30 @@ export function ResumePage() {
 
                 {/* Projects */}
                 <section>
-                  <h3 className="text-xl font-bold text-red-400 mb-4">Key Projects</h3>
+                  <h3 className="text-3xl font-bold text-red-400 mb-4">Key Projects</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-white">RAG Chatbot</h4>
-                      <p className="text-white text-sm">
-                        End-to-end NLP pipeline for PDF, CSV, and web ingestion with semantic search capabilities 
-                        using Python, LangChain, and PyTorch.
+                      <h4 className="text-xl font-semibold text-white">Delta Chi Alumni Portal</h4>
+                      <p className="text-white text-lg">
+                        Full-stack alumni engagement platform serving 1,000+ users, built with Django, PostgreSQL, and modern responsive UI. Live at iamkimball.com.
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">Website Status Checker</h4>
-                      <p className="text-white text-sm">
-                        Real-time uptime monitoring tool with dashboard analytics and alert systems 
-                        using JavaScript, REST APIs, and Chart.js.
+                      <h4 className="text-xl font-semibold text-white">UA CS Degree Planner</h4>
+                      <p className="text-white text-lg">
+                        Retrieval-augmented chatbot that answers UA Computer Science degree-planning questions, grounded in the official catalog and major-map documents. Built with FastAPI, Chroma vector store, and Groq-hosted Llama 3.3 70B.
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">Food Rescue Campus Connect</h4>
-                      <p className="text-white text-sm">
-                        Platform for redistributing surplus food on campus with real-time matching 
-                        using TypeScript, Firebase, and React.
+                      <h4 className="text-xl font-semibold text-white">Website Status Checker</h4>
+                      <p className="text-white text-lg">
+                        Serverless uptime monitoring tool built on AWS Lambda, API Gateway, and DynamoDB (SAM-deployed) with a React dashboard for real-time status and history.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold text-white">Tucson Crime Analysis</h4>
+                      <p className="text-white text-lg">
+                        Statistical analysis of 170,000+ Tucson crime records using chi-square tests and scikit-learn classification models to surface neighborhood-level trends.
                       </p>
                     </div>
                   </div>

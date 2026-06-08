@@ -6,6 +6,118 @@ import { ScrollAnimation, StaggerAnimation } from '../components/ScrollAnimation
 
 const blogPosts = [
   {
+    id: 101,
+    title: "Key West, Florida",
+    excerpt: "Closed out the spring with a sun-soaked trip to Key West. Watched sunsets at Mallory Square, kayaked through mangroves, and ate way too much conch — the perfect post-grad reset before the next chapter.",
+    date: "2026-05-28",
+    tags: ["Travel", "Florida", "Post-Grad"],
+    imageUrl: "/apurbo-portfolio/key_west_florida.jpg"
+  },
+  {
+    id: 102,
+    title: "MoMA Art Gallery, New York",
+    excerpt: "Spent an afternoon at the Museum of Modern Art on day two in NYC. Picasso, Warhol, and Van Gogh's Starry Night in person — a slower, quieter end to a high-energy trip.",
+    date: "2026-05-21",
+    tags: ["Travel", "Art", "New York"],
+    imageUrl: "/apurbo-portfolio/moma_art_gallery_nyc.jpg"
+  },
+  {
+    id: 103,
+    title: "Wandering MoMA, NYC",
+    excerpt: "Another shot from MoMA — the building itself is a piece of art. Wandered between floors taking in modern installations and rotating exhibits before heading back uptown.",
+    date: "2026-05-21",
+    tags: ["Travel", "New York", "Museum"],
+    imageUrl: "/apurbo-portfolio/moma_nyc.jpg"
+  },
+  {
+    id: 104,
+    title: "Times Square, New York City",
+    excerpt: "First night in NYC and Times Square delivered — billboards stacked on billboards, traffic that never stops, and the kind of energy you can only feel standing in the middle of it. Pure sensory overload in the best way.",
+    date: "2026-05-20",
+    tags: ["Travel", "New York", "Adventure"],
+    imageUrl: "/apurbo-portfolio/times_square_nyc.jpg"
+  },
+  {
+    id: 105,
+    title: "Brooklyn Bridge Walk",
+    excerpt: "Walked the Brooklyn Bridge at golden hour with the Manhattan skyline glowing behind us. One of those moments where the city actually slows down for a second — easily a highlight of the New York trip.",
+    date: "2026-05-20",
+    tags: ["Travel", "New York", "Photography"],
+    imageUrl: "/apurbo-portfolio/brooklyn_bridge_nyc.jpg"
+  },
+  {
+    id: 106,
+    title: "Grand Canyon Road Trip",
+    excerpt: "Stood at the South Rim and just stared. Photos do not do this place justice — the scale of it is humbling. A perfect detour to round out a weekend of Arizona exploration.",
+    date: "2026-05-17",
+    tags: ["Travel", "Arizona", "Nature"],
+    imageUrl: "/apurbo-portfolio/grand_canyon.jpg"
+  },
+  {
+    id: 107,
+    title: "Weekend in Sedona",
+    excerpt: "Spent a weekend chasing red rocks in Sedona. Hiked Cathedral Rock at sunrise, stopped at every roadside vista, and ended the day at a small cafe in town. Arizona has no shortage of postcard moments.",
+    date: "2026-05-17",
+    tags: ["Travel", "Arizona", "Hiking"],
+    imageUrl: "/apurbo-portfolio/sedona.jpg"
+  },
+  {
+    id: 108,
+    title: "Commencement Day with Friends",
+    excerpt: "Crossed the stage and celebrated with the people who got me here. Caps in the air, group photos until our cheeks hurt — a wrap on four unforgettable years at the U of A.",
+    date: "2026-05-15",
+    tags: ["Graduation", "Friends", "Milestone"],
+    imageUrl: "/apurbo-portfolio/grad_commencement_friends.jpg"
+  },
+  {
+    id: 109,
+    title: "Graduation Day in Front of Old Main",
+    excerpt: "The traditional Old Main shot. Standing in front of the building that has watched generations of Wildcats walk by — a small but meaningful moment to mark the end of my undergrad journey.",
+    date: "2026-05-15",
+    tags: ["Graduation", "University of Arizona", "Milestone"],
+    imageUrl: "/apurbo-portfolio/grad_old_main.jpg"
+  },
+  {
+    id: 110,
+    title: "Beaches of San Diego",
+    excerpt: "Caught a quiet morning at one of San Diego's beaches before the crowds arrived. Cool Pacific breeze, soft sand, and a long walk along the shoreline — exactly the recharge I needed mid-semester.",
+    date: "2026-03-15",
+    tags: ["Travel", "Beach", "California"],
+    imageUrl: "/apurbo-portfolio/san_diego_beach.jpg"
+  },
+  {
+    id: 111,
+    title: "San Diego Trip with Friends",
+    excerpt: "Drove out to San Diego with friends for a spring break getaway. Tacos, beach days, the USS Midway, and a lot of laughs — a much-needed break from coursework and a chance to make some great memories.",
+    date: "2026-03-14",
+    tags: ["Travel", "Friends", "California"],
+    imageUrl: "/apurbo-portfolio/san_diego_friends.jpg"
+  },
+  {
+    id: 112,
+    title: "Trip to Chittagong, Bangladesh",
+    excerpt: "Spent New Year's Day at Chittagong Naval — quiet sea, family time, and a much-needed reconnection with home. A grounding way to open 2026 before flying back for the spring semester.",
+    date: "2026-01-01",
+    tags: ["Travel", "Family", "Bangladesh"],
+    imageUrl: "/apurbo-portfolio/bangladesh_chittagong.jpg"
+  },
+  {
+    id: 113,
+    title: "Last UA Home Football Game as a Senior",
+    excerpt: "Made it to the last home game of the season as a senior — the band, the cardinal-and-navy crowd, and one final 'Bear Down' chant from the student section. A bittersweet send-off to four years at Arizona Stadium.",
+    date: "2025-11-15",
+    tags: ["University of Arizona", "Sports", "Senior Year"],
+    imageUrl: "/apurbo-portfolio/last_ua_home_game.jpg"
+  },
+  {
+    id: 114,
+    title: "Friend's Birthday Dinner in Tucson",
+    excerpt: "Met up with friends downtown for a birthday dinner — good food, great company, and the kind of laughter that makes a Tuesday feel like a weekend. Small moments like these are what college is really about.",
+    date: "2025-08-15",
+    tags: ["Friends", "Tucson", "Celebration"],
+    imageUrl: "/apurbo-portfolio/friends_bday_tucson.jpg"
+  },
+  {
     id: 1,
     title: "Welcoming Our New RA Staff for Fall 2025",
     excerpt: "Starting the new academic year with our incoming RA staff for Fall 2025. Looking forward to working with this dedicated team to support our Apache Santa Cruz residents.",
@@ -151,8 +263,12 @@ export function BlogsPage() {
                       src={post.imageUrl} 
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      style={{ 
-                        objectPosition: post.id === 1 ? '30% center' : post.id === 2 ? '80% 75%' : '5% center'
+                      style={{
+                        objectPosition:
+                          post.id === 1 ? '30% center' :
+                          post.id === 2 ? '80% 75%' :
+                          (post.id === 10 || post.id === 113 || post.id === 114) ? '50% center' :
+                          '5% center'
                       }}
                       onError={(e) => {
                         // Fallback to emoji if image fails to load
