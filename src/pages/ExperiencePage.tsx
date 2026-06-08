@@ -6,43 +6,70 @@ import { Badge } from '../components/ui/badge';
 const experiences = [
 	{
 		title: 'Software Engineer Intern',
-		company: 'EduTrend',
-		location: 'Remote',
-		duration: 'Jul 2025 – Present',
+		company: 'PwC (through Eller Immersion Project Office / EPO)',
+		location: 'Tucson, AZ',
+		duration: 'Jan 2026 – May 2026',
 		description:
-			'Building and deploying scalable software solutions using modern development practices and cloud technologies.',
+			'Architected a full-stack workforce planning platform and built an agentic AI chatbot for PwC consultants through the Eller Immersion Project Office.',
 		achievements: [
-			'Developed full-stack applications using React and Node.js',
-			'Implemented CI/CD pipelines reducing deployment time by 40%',
-			'Collaborated with cross-functional teams on product development',
+			'Architected a full-stack workforce planning platform (React, TypeScript, Node.js, AWS RDS PostgreSQL) consolidating 5 enterprise systems into a unified dashboard, deployed on AWS EC2',
+			'Built an agentic AI chatbot using Claude 3 Haiku via AWS Bedrock with a dual-pass engine that generates and executes live SQL',
+			'Developed an XGBoost model with SHAP explainability to predict project extension risk',
 		],
-		current: true,
+		current: false,
+	},
+	{
+		title: 'Software Engineer Intern',
+		company: 'EduTrend (Quanticore LLC)',
+		location: 'Remote',
+		duration: 'Aug 2025 – Dec 2025',
+		description:
+			'Built backend services and authentication for a TypeScript mobile app, and stabilized the CI/CD pipeline.',
+		achievements: [
+			'Designed GraphQL schemas, resolvers, and MongoDB service layers in a TypeScript mobile backend',
+			'Built secure auth and role-based access control using Clerk with OAuth login flows',
+			'Resolved GitHub Actions CI/CD pipeline failures',
+		],
+		current: false,
+	},
+	{
+		title: 'Undergraduate Teaching Assistant (CS 110)',
+		company: 'University of Arizona',
+		location: 'Tucson, AZ',
+		duration: 'Jan 2024 – May 2026',
+		description:
+			'Taught data structures and algorithms while automating grading workflows to reclaim instructor time.',
+		achievements: [
+			'Built Python automation scripts for grading, cutting manual evaluation time by 10+ hours/week',
+			'Taught data structures and algorithms to 150+ students per semester',
+		],
+		current: false,
 	},
 	{
 		title: 'Resident Assistant',
 		company: 'University of Arizona',
 		location: 'Tucson, AZ',
-		duration: 'Aug 2024 – Present',
+		duration: 'Aug 2024 – May 2026',
 		description: 'Leadership role managing residential community and student development programs.',
 		achievements: [
 			'Led "Late-Night Study Hub" with 35+ weekly attendees',
 			'Resolved student disputes and crisis situations',
 			'Boosted event participation by 65% through innovative programming',
 		],
-		current: true,
+		current: false,
 	},
 	{
-		title: 'Undergraduate Teaching Assistant',
-		company: 'CS 110 - University of Arizona',
+		title: 'Scholarship Chair',
+		company: 'Delta Chi Fraternity',
 		location: 'Tucson, AZ',
-		duration: 'Dec 2023 – Present',
-		description: 'Supporting computer science education for introductory programming courses.',
+		duration: 'Nov 2023 – Dec 2025',
+		description: 'Led academic programs and coordinated educational initiatives for fraternity members.',
 		achievements: [
-			'Mentored 300+ students in programming fundamentals',
-			'Designed interactive dashboards reducing failure rate by 22%',
-			'Conducted weekly lab sessions and office hours',
+			'Coordinated tutoring programs for members',
+			'Implemented academic tracking systems',
+			'Organized study groups and academic workshops',
 		],
-		current: true,
+		current: false,
 	},
 	{
 		title: 'Undergraduate Teaching Assistant',
@@ -56,19 +83,6 @@ const experiences = [
 			'Improved student engagement through interactive sessions',
 		],
 		current: false,
-	},
-	{
-		title: 'Scholarship Chair',
-		company: 'Delta Chi Fraternity',
-		location: 'Tucson, AZ',
-		duration: 'Nov 2023 – Present',
-		description: 'Leading academic programs and coordinating educational initiatives for fraternity members.',
-		achievements: [
-			'Coordinated tutoring programs for members',
-			'Implemented academic tracking systems',
-			'Organized study groups and academic workshops',
-		],
-		current: true,
 	},
 ];
 
@@ -193,9 +207,13 @@ export function ExperiencePage() {
 								</CardTitle>
 							</CardHeader>
 							<CardContent>
-								<div className="grid md:grid-cols-3 gap-6 text-center">
+								<div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 									<div className="space-y-2">
-										<div className="text-3xl font-bold text-red-400">600+</div>
+										<div className="text-3xl font-bold text-yellow-400">5</div>
+										<div className="text-white">Enterprise Systems Consolidated</div>
+									</div>
+									<div className="space-y-2">
+										<div className="text-3xl font-bold text-red-400">750+</div>
 										<div className="text-white">Students Mentored</div>
 									</div>
 									<div className="space-y-2">
