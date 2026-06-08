@@ -78,7 +78,7 @@ export function ResumePage() {
                 <div className="flex flex-wrap justify-center gap-6 text-sm text-white">
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4" />
-                    <span>apurbo@arizona.edu</span>
+                    <span>apurboctgs11@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4" />

@@ -33,18 +33,33 @@ export function ContactPage() {
     setError(null);
     
     try {
-      // Use the real Supabase contact submission
-      await contact.submit({
+      const response = await fetch('https://formspree.io/f/mzdqrbor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Formspree ${response.status}`);
+      }
+
+      // Best-effort backup write to Supabase KV — don't block UX if it fails
+      contact.submit({
         name: formData.name,
         email: formData.email,
         subject: formData.subject,
-        message: formData.message
-      });
-      
+        message: formData.message,
+      }).catch(() => {});
+
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset success message after 5 seconds
+
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
@@ -60,8 +75,8 @@ export function ContactPage() {
     {
       icon: Mail,
       label: "Email",
-      value: "apurbo@arizona.edu",
-      href: "mailto:apurbo@arizona.edu",
+      value: "apurboctgs11@gmail.com",
+      href: "mailto:apurboctgs11@gmail.com",
       description: "Best for professional inquiries"
     },
     {
@@ -106,7 +121,7 @@ export function ContactPage() {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm actively seeking Summer 2025 internship opportunities in Software Engineering, AI/ML, or Data Science. 
+              I'm open to Full-Time Roles in Software Engineering, AI/ML, or Data Science.
               Let's discuss how I can contribute to your team!
             </p>
           </motion.div>
@@ -125,7 +140,7 @@ export function ContactPage() {
                   <h3 className="text-lg font-semibold text-green-400">Currently Available</h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Seeking Summer 2025 internships in Software Engineering, AI/ML, or Data Science
+                  Open to Full-Time Roles in Software Engineering, AI/ML, or Data Science
                 </p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {['Software Engineering', 'AI/ML', 'Data Science', 'Full-Stack Development'].map((field) => (

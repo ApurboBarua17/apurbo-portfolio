@@ -97,7 +97,7 @@ export function HomePage() {
                     Aspiring Software Engineer
                   </p>
                   <p className="text-lg text-muted-foreground">
-                    CS @ University of Arizona | AI/ML Enthusiast | Full-Stack Developer | Teaching Assistant
+                    CS @ University of Arizona | AI/ML Engineer | Full-Stack Developer | Teaching Assistant
                   </p>
                 </motion.div>
               </div>
@@ -119,7 +119,7 @@ export function HomePage() {
                     <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-green-400 rounded-full pulse-glow"></div>
                       <p className="text-foreground font-medium">
-                        Actively seeking Summer 2026 internships in
+                        Open to Full-Time Roles in
                       </p>
                     </div>
                     <div className="mt-2 flex flex-wrap gap-2">
@@ -175,7 +175,7 @@ export function HomePage() {
                 {[
                   { Icon: Linkedin, href: 'https://linkedin.com/in/apurbo-barua', label: 'LinkedIn' },
                   { Icon: Github, href: 'https://github.com/apurbo-barua', label: 'GitHub' },
-                  { Icon: Mail, href: 'mailto:apurbo@arizona.edu', label: 'Email' }
+                  { Icon: Mail, href: 'mailto:apurboctgs11@gmail.com', label: 'Email' }
                 ].map(({ Icon, href, label }) => (
                   <a
                     key={label}

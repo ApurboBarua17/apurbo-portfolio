@@ -59,8 +59,8 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "apurbo@arizona.edu",
-      href: "mailto:apurbo@arizona.edu"
+      value: "apurboctgs11@gmail.com",
+      href: "mailto:apurboctgs11@gmail.com"
     },
     {
       icon: MapPin,

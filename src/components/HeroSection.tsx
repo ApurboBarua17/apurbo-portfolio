@@ -156,7 +156,7 @@ export function HeroSection() {
                 {[
                   { Icon: Linkedin, href: 'https://linkedin.com/in/apurbo-barua', label: 'LinkedIn' },
                   { Icon: Github, href: 'https://github.com/apurbo-barua', label: 'GitHub' },
-                  { Icon: Mail, href: 'mailto:apurbo@arizona.edu', label: 'Email' }
+                  { Icon: Mail, href: 'mailto:apurboctgs11@gmail.com', label: 'Email' }
                 ].map(({ Icon, href, label }) => (
                   <a
                     key={label}

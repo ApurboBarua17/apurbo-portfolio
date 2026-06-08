@@ -66,7 +66,7 @@ export function Footer() {
                   <Github className="h-5 w-5" />
                 </a>
                 <a
-                  href="mailto:apurbo@arizona.edu"
+                  href="mailto:apurboctgs11@gmail.com"
                   className="text-white hover:text-red-400 transition-colors duration-200"
                   aria-label="Email Contact"
                 >
