@@ -24,6 +24,21 @@ const projects = [
 		imageAlt: 'Delta Chi alumni platform showing member dashboard and engagement features',
 	},
 	{
+		id: 13,
+		title: 'UA CS Degree Planner',
+		description:
+			'RAG-powered chatbot that answers degree-planning questions for UA CS students, grounded in official catalog and major-map documents.',
+		longDescription:
+			'Retrieval-augmented chatbot built for University of Arizona Computer Science students to navigate degree requirements. Ingests the official course catalog and major-map PDFs into a Chroma vector store, retrieves the most relevant passages per question, and generates grounded answers using Groq-hosted Llama 3.3 70B. Backend served via FastAPI with structured prompt templates that keep the model anchored to source material and reduce hallucination.',
+		tech: ['Python', 'FastAPI', 'Groq (Llama 3.3 70B)', 'Chroma', 'RAG', 'LangChain'],
+		category: 'AI/ML',
+		githubUrl: 'https://github.com/ApurboBarua17/RAG_chatbot',
+		liveUrl: '#',
+		featured: true,
+		image: projectImages.ragChatbot,
+		imageAlt: 'UA CS Degree Planner RAG chatbot answering a course-planning question',
+	},
+	{
 		id: 2,
 		title: 'Sort Visualizer',
 		description:
@@ -53,21 +68,6 @@ const projects = [
 		imageAlt: 'Website status dashboard with uptime metrics',
 	},
 	{
-		id: 3,
-		title: 'Sort Visualizer',
-		description:
-			'Interactive educational tool with animated visualizations of sorting algorithms and complexity analysis.',
-		longDescription:
-			'Educational platform that helps students understand sorting algorithms through interactive visualizations. Features step-by-step animations, complexity comparisons, and customizable data sets.',
-		tech: ['Python', 'Pygame', 'Algorithms', 'Data Structures'],
-		category: 'Education',
-		githubUrl: 'https://github.com/ApurboBarua17/Sort_visualizer',
-		liveUrl: 'https://algovizualization.vercel.app/',
-		featured: true,
-		image: projectImages.algovizSortingAlgo,
-		imageAlt: 'Sorting algorithm visualization with animated bars',
-	},
-	{
 		id: 4,
 		title: 'RecipeHub',
 		description:
@@ -80,6 +80,20 @@ const projects = [
 		liveUrl: '#',
 		image: projectImages.recipeSharing_Hub,
 		imageAlt: 'RecipeHub social platform showing recipe sharing interface',
+	},
+	{
+		id: 14,
+		title: 'Tucson Crime Analysis',
+		description:
+			'Statistical analysis of 170,000+ Tucson crime records using chi-square tests and scikit-learn to surface neighborhood-level trends.',
+		longDescription:
+			'End-to-end data science project on 170,000+ Tucson Police Department crime records. Cleaned and joined incident data with neighborhood-level features, ran chi-square tests of independence to identify which crime types are unevenly distributed across neighborhoods, and trained classification models in scikit-learn to predict incident category from time-of-day, location, and demographic context. Findings visualized as heatmaps and ranked-importance plots.',
+		tech: ['Python', 'scikit-learn', 'pandas', 'chi-square', 'matplotlib', 'Jupyter'],
+		category: 'Data Science',
+		githubUrl: 'https://github.com/ApurboBarua17/tucson-crime-analysis',
+		liveUrl: '#',
+		image: projectImages.socioeconimic_project,
+		imageAlt: 'Tucson crime analysis heatmap and chi-square test results',
 	},
 	{
 		id: 5,
