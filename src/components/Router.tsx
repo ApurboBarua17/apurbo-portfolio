@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Layout } from './Layout';
 import { HomePage } from '../pages/HomePage';
@@ -8,6 +8,7 @@ import { SkillsPage } from '../pages/SkillsPage';
 import { BlogsPage } from '../pages/BlogsPage';
 import { ResumePage } from '../pages/ResumePage';
 import { ContactPage } from '../pages/ContactPage';
+import { useEffect } from 'react';
 
 function AppRoutes() {
   return (
@@ -29,10 +30,11 @@ function AppRoutes() {
 }
 
 export function Router() {
-  // Use the same base path that's configured in vite.config.ts
+  // For GitHub Pages, we use HashRouter instead of BrowserRouter
+  // This ensures that refreshing the page works correctly
   return (
-    <BrowserRouter basename="/apurbo-portfolio">
+    <HashRouter>
       <AppRoutes />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

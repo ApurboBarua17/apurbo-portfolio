@@ -173,8 +173,8 @@ export function HomePage() {
                 className="flex space-x-6 pt-4"
               >
                 {[
-                  { Icon: Linkedin, href: 'https://linkedin.com/in/apurbo-barua', label: 'LinkedIn' },
-                  { Icon: Github, href: 'https://github.com/apurbo-barua', label: 'GitHub' },
+                  { Icon: Linkedin, href: 'https://linkedin.com/in/apurbo-barua17', label: 'LinkedIn' },
+                  { Icon: Github, href: 'https://github.com/ApurboBarua17', label: 'GitHub' },
                   { Icon: Mail, href: 'mailto:apurboctgs11@gmail.com', label: 'Email' }
                 ].map(({ Icon, href, label }) => (
                   <a

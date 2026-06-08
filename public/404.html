@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <script>
+    // Single Page App routing fix for GitHub Pages
+    // We're using the hash-based redirect strategy
+    
+    // Get the current location information
+    const loc = window.location;
+    
+    // This is the repository name on GitHub Pages
+    const repoName = 'apurbo-portfolio';
+    const fullPath = loc.pathname;
+    
+    // Check if the URL contains our repo name
+    if (fullPath.indexOf('/' + repoName + '/') === 0) {
+      // Extract the path after the repo name
+      const pathSegments = fullPath.split('/');
+      // Remove empty first element and repo name
+      const relevantPath = pathSegments.slice(2).join('/');
+      
+      // Build the redirect URL that will be processed by our index.html script
+      const redirectUrl = loc.protocol + '//' + loc.hostname + 
+        (loc.port ? ':' + loc.port : '') + 
+        '/' + repoName + '/#/' + relevantPath +
+        (loc.search || '') + 
+        (loc.hash || '');
+      
+      // Redirect to the new URL
+      window.location.replace(redirectUrl);
+    } else {
+      // If we're somehow outside the repo path, go to the homepage
+      window.location.replace(
+        loc.protocol + '//' + loc.hostname + 
+        (loc.port ? ':' + loc.port : '') + 
+        '/' + repoName + '/'
+      );
+    }
+  </script>
+</head>
+<body>
+  <h1>Page Not Found</h1>
+  <p>Redirecting to homepage...</p>
+  <p>If you are not redirected automatically, please click <a href="/apurbo-portfolio/">here</a> to go to the homepage.</p>
+</body>
+</html>
