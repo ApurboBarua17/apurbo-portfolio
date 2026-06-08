@@ -76,7 +76,7 @@ const projects = [
 			'Full-stack social platform where users can share recipes, rate dishes, write reviews, and connect with other cooking enthusiasts. Features user profiles, recipe collections, and ingredient shopping lists.',
 		tech: ['JavaScript', 'Node.js', 'MongoDB', 'Express', 'Socket.io'],
 		category: 'Full-Stack',
-		githubUrl: 'https://github.com/apurbo-barua/recipe-hub', // You can update this later
+		githubUrl: 'https://github.com/ApurboBarua17/RecipeHub',
 		liveUrl: '#',
 		image: projectImages.recipeSharing_Hub,
 		imageAlt: 'RecipeHub social platform showing recipe sharing interface',
