@@ -12,6 +12,8 @@ import digiWhiteboard from '../assets/digiWhiteboard.png';
 import bookReview from '../assets/Book_review.png';
 import huffmanEncoding from '../assets/HuffmanEncodig.png';
 import portfolioWebsite from '../assets/portfolio.png';
+import reselliq from '../assets/reselliq.png';
+import agrisense from '../assets/agrisense.png';
 
 // Export all project images
 export const projectImages = {
@@ -28,6 +30,8 @@ export const projectImages = {
   bookReview,
   huffmanEncoding,
   portfolioWebsite,
+  reselliq,
+  agrisense,
 };
 
 // Helper function to get image by name

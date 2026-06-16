@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Mail, Github, Linkedin, Sparkles, Award, ExternalLink } from 'lucide-react';
+import { ArrowRight, Download, Mail, Github, Linkedin, Sparkles, Award, ExternalLink, Code2 } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ScrollAnimation, StaggerAnimation } from '../components/ScrollAnimation';
+import { projectImages } from '../utils/projectImages';
 
 export function HomePage() {
   const [imageError, setImageError] = useState(false);
@@ -13,7 +15,7 @@ export function HomePage() {
   const stats = [
     { number: '3+', label: 'Years Programming' },
     { number: '15+', label: 'Technologies' },
-    { number: '9+', label: 'Projects Completed' },
+    { number: '11+', label: 'Projects Completed' },
     { number: '600+', label: 'Students Mentored' },
   ];
 
@@ -94,7 +96,7 @@ export function HomePage() {
                   className="space-y-2"
                 >
                   <p className="text-xl sm:text-2xl text-red-400 font-semibold">
-                    Aspiring Software Engineer
+                    Software Engineer
                   </p>
                   <p className="text-lg text-muted-foreground">
                     CS @ University of Arizona | AI/ML Engineer | Full-Stack Developer | Teaching Assistant
@@ -109,7 +111,7 @@ export function HomePage() {
                 className="space-y-6"
               >
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-                  I'm passionate about solving real-world problems through software engineering and AI. 
+                  Computer Science graduate from the University of Arizona (May 2026) with experience building production software across backend systems, cloud infrastructure, and AI-powered applications. I'm passionate about solving real-world problems through software engineering and AI. 
                   I build full-stack web applications, visualize data to uncover hidden trends, and create 
                   engaging learning experiences for students.
                 </p>
@@ -265,6 +267,140 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Featured Projects Section */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-950/10 to-transparent"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollAnimation direction="up" duration={0.8}>
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center space-x-2 text-red-400 mb-4">
+                <Code2 className="h-6 w-6" />
+                <span className="text-lg font-medium">Featured Work</span>
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-foreground via-red-400 to-red-600 bg-clip-text text-transparent">
+                  Featured Projects
+                </span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Recent projects spanning full-stack development, AI/ML, and cloud-native architecture
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation direction="up" duration={0.8} delay={0.2}>
+            <StaggerAnimation staggerDelay={0.15} className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* ResellIQ */}
+              <Card className="overflow-hidden glass-card border-red-500/20 hover-lift group h-full">
+                <div className="aspect-video relative overflow-hidden">
+                  <img
+                    src={projectImages.reselliq}
+                    alt="ResellIQ dashboard showing eBay comparable listings, price statistics, and AI-generated listing copy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-red-600 text-white">Featured</Badge>
+                  </div>
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="bg-card/90"
+                      onClick={() => window.open('https://github.com/ApurboBarua17/resell-iq', '_blank')}
+                    >
+                      <Github className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <Badge variant="outline" className="border-red-500/50 text-red-400">Full-Stack</Badge>
+                    <Code2 className="h-5 w-5 text-red-400" />
+                  </div>
+                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">
+                    ResellIQ — Resale Price Intelligence
+                  </CardTitle>
+                  <CardDescription className="text-white leading-relaxed">
+                    AI-powered pricing tool for secondhand sellers. Describe an item → get eBay comparable listings, price statistics, and an LLM-generated listing title and description. Built with cache-aside Redis, fixed-size worker pool, and FastAPI.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {['React', 'FastAPI', 'Redis', 'PostgreSQL', 'Kubernetes', 'eBay API', 'GPT-4o-mini'].map((tech) => (
+                      <Badge key={tech} variant="secondary" className="bg-red-500/10 text-white border-red-500/30 text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* AgriSense */}
+              <Card className="overflow-hidden glass-card border-red-500/20 hover-lift group h-full">
+                <div className="aspect-video relative overflow-hidden">
+                  <img
+                    src={projectImages.agrisense}
+                    alt="AgriSense platform showing crop disease diagnosis, treatment recommendations, and market price forecast"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-red-600 text-white">Featured</Badge>
+                  </div>
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="bg-card/90"
+                      onClick={() => window.open('https://github.com/ApurboBarua17/agrisense', '_blank')}
+                    >
+                      <Github className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <Badge variant="outline" className="border-red-500/50 text-red-400">AI/ML</Badge>
+                    <Code2 className="h-5 w-5 text-red-400" />
+                  </div>
+                  <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors duration-300">
+                    AgriSense — Crop Disease & Market Intelligence
+                  </CardTitle>
+                  <CardDescription className="text-white leading-relaxed">
+                    Hackathon-winning AI agent: upload a crop photo → HuggingFace disease detection → Azure AI Foundry USDA-grounded treatment → Prophet market forecasting. KEDA-based Kubernetes autoscaling from 0→10 pods.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {['Kubernetes', 'KEDA', 'Azure AI Foundry', 'HuggingFace', 'Prophet', 'FastAPI', 'Streamlit'].map((tech) => (
+                      <Badge key={tech} variant="secondary" className="bg-red-500/10 text-white border-red-500/30 text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </StaggerAnimation>
+          </ScrollAnimation>
+
+          {/* See More Projects CTA */}
+          <ScrollAnimation direction="up" duration={0.6} delay={0.4}>
+            <div className="text-center">
+              <Link to="/portfolio">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white px-10 py-4 rounded-full btn-modern hover-lift group"
+                >
+                  See More Projects
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </Button>
+              </Link>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
       {/* Certifications Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -288,8 +424,8 @@ export function HomePage() {
           <ScrollAnimation direction="up" duration={0.8} delay={0.2}>
             <StaggerAnimation staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {certifications.map((cert, index) => (
-                <Card key={index} className="glass-card border-red-500/20 hover-lift group">
-                  <CardContent className="p-6">
+                <Card key={index} className="glass-card border-red-500/20 hover-lift group h-full">
+                  <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex items-start space-x-4 mb-4">
                       <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-white rounded-lg p-2">
                         <img 
@@ -329,15 +465,17 @@ export function HomePage() {
                       </div>
                     </div>
 
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full border-red-500/20 text-red-400 hover:bg-red-500/10 hover:border-red-500/40 group"
-                      onClick={() => window.open(cert.link, '_blank')}
-                    >
-                      <span>View Credential</span>
-                      <ExternalLink className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                    </Button>
+                    <div className="mt-auto">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full border-red-500/20 text-red-400 hover:bg-red-500/10 hover:border-red-500/40 group"
+                        onClick={() => window.open(cert.link, '_blank')}
+                      >
+                        <span>View Credential</span>
+                        <ExternalLink className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code, Database, Cloud, Brain, Globe, GitBranch, Award, Trophy, Star } from 'lucide-react';
+import { Code, Database, Brain, Globe, GitBranch, Award, Trophy, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 
@@ -7,37 +7,37 @@ const skillCategories = [
   {
     title: "Programming Languages",
     icon: Code,
-    skills: ["Java", "Python", "C", "R", "MATLAB", "JavaScript", "TypeScript"],
+    skills: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "C", "R", "MATLAB"],
     color: "red"
   },
   {
-    title: "Web Development",
+    title: "Backend & APIs",
     icon: Globe,
-    skills: ["React", "Node.js", "HTML", "CSS", "Express", "Flask", "Gradio"],
+    skills: ["Node.js", "Express.js", "FastAPI", "Django", "REST APIs", "GraphQL", "Microservices"],
     color: "orange"
   },
   {
-    title: "Database & Cloud",
-    icon: Database,
-    skills: ["MongoDB", "SQL", "AWS Lambda", "CloudWatch", "EC2", "S3", "IAM", "SES"],
-    color: "blue"
+    title: "Frontend",
+    icon: Globe,
+    skills: ["React", "React Native", "Streamlit", "Vite", "Expo", "HTML", "CSS", "Tailwind CSS"],
+    color: "orange"
   },
   {
     title: "AI/ML & Data Science",
     icon: Brain,
-    skills: ["LangChain", "PyTorch", "Scikit-learn", "Pandas", "Data Visualization", "Machine Learning"],
+    skills: ["PyTorch", "TensorFlow", "scikit-learn", "XGBoost", "Meta Prophet", "Hugging Face", "LangChain", "RAG", "LLMs", "Pandas", "AWS Bedrock", "OpenAI/GitHub Models", "SHAP"],
     color: "purple"
   },
   {
-    title: "Cloud Platforms",
-    icon: Cloud,
-    skills: ["AWS", "Firebase", "Cloud Functions", "Cloud Storage"],
-    color: "cyan"
+    title: "Databases & Cloud",
+    icon: Database,
+    skills: ["PostgreSQL", "MongoDB", "DynamoDB", "Redis", "AWS (Lambda, API Gateway, EC2, S3, SAM, IAM)", "Azure", "Firebase"],
+    color: "blue"
   },
   {
-    title: "Tools & Platforms",
+    title: "DevOps & Tools",
     icon: GitBranch,
-    skills: ["Git", "GitHub", "Jupyter", "Canvas API", "REST APIs"],
+    skills: ["Docker", "Kubernetes", "KEDA", "Git", "GitHub Actions (CI/CD)", "Linux/Unix", "Agile/Scrum", "CloudWatch", "Jupyter"],
     color: "green"
   }
 ];
@@ -167,7 +167,7 @@ export function SkillsPage() {
                     <div className="text-muted-foreground">Technologies Mastered</div>
                   </div>
                   <div className="space-y-2">
-                    <div className="text-3xl font-bold text-green-400">9+</div>
+                    <div className="text-3xl font-bold text-green-400">11+</div>
                     <div className="text-muted-foreground">Projects Completed</div>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 
 export function Footer() {
@@ -23,11 +24,11 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
-    { name: 'Home', id: 'hero' },
-    { name: 'Portfolio', id: 'portfolio' },
-    { name: 'Experience', id: 'experience' },
-    { name: 'Skills', id: 'skills' },
-    { name: 'Contact', id: 'contact' }
+    { name: 'Home', path: '/' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Experience', path: '/experience' },
+    { name: 'Skills', path: '/skills' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   return (
@@ -37,14 +38,14 @@ export function Footer() {
           <div className="grid md:grid-cols-3 gap-8 items-center">
             {/* Logo and Description */}
             <div className="space-y-4">
-              <button 
-                onClick={() => scrollToSection('hero')}
+              <Link 
+                to="/"
                 className="text-xl font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent cursor-pointer"
               >
                 Apurbo Barua
-              </button>
+              </Link>
               <p className="text-white leading-relaxed">
-                Aspiring Software Engineer passionate about creating innovative solutions through technology and AI.
+                Software Engineer passionate about creating innovative solutions through technology and AI.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -80,13 +81,13 @@ export function Footer() {
               <h4 className="font-semibold text-white">Quick Links</h4>
               <div className="grid grid-cols-2 gap-2">
                 {navLinks.map((link) => (
-                  <button
-                    key={link.id}
-                    onClick={() => scrollToSection(link.id)}
+                  <Link
+                    key={link.path}
+                    to={link.path}
                     className="text-white hover:text-red-400 transition-colors duration-200 text-sm text-left"
                   >
                     {link.name}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -97,12 +98,13 @@ export function Footer() {
               <p className="text-white text-sm">
                 Seeking Summer 2026 internships in Software Engineering, AI/ML, or Data Science.
               </p>
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white w-full btn-modern"
-              >
-                Get In Touch
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white w-full btn-modern"
+                >
+                  Get In Touch
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

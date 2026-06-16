@@ -162,115 +162,147 @@ export function ContactPage() {
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Card className="glass-card border-red-500/20 hover-lift">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-white flex items-center space-x-2">
-                    <MessageSquare className="h-6 w-6 text-red-400" />
-                    <span>Send Message</span>
-                  </CardTitle>
-                  <CardDescription className="text-white">
-                    Fill out the form below and I'll get back to you within 24 hours.
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent>
-                  {isSubmitted ? (
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      className="text-center py-8 space-y-4"
-                    >
-                      <CheckCircle className="h-16 w-16 text-green-400 mx-auto" />
-                      <h3 className="text-xl font-semibold text-foreground">Message Sent!</h3>
-                      <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you soon.</p>
-                    </motion.div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Left Column: Contact Form + Response Time */}
+            <div className="space-y-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Card className="glass-card border-red-500/20 hover-lift">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-white flex items-center space-x-2">
+                      <MessageSquare className="h-6 w-6 text-red-400" />
+                      <span>Send Message</span>
+                    </CardTitle>
+                    <CardDescription className="text-white">
+                      Fill out the form below and I'll get back to you within 24 hours.
+                    </CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    {isSubmitted ? (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="text-center py-8 space-y-4"
+                      >
+                        <CheckCircle className="h-16 w-16 text-green-400 mx-auto" />
+                        <h3 className="text-xl font-semibold text-foreground">Message Sent!</h3>
+                        <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you soon.</p>
+                      </motion.div>
+                    ) : (
+                      <form onSubmit={handleSubmit} className="space-y-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          <div className="space-y-2">
+                            <Label htmlFor="name" className="text-foreground">Name *</Label>
+                            <Input
+                              id="name"
+                              name="name"
+                              type="text"
+                              required
+                              value={formData.name}
+                              onChange={handleInputChange}
+                              className="border-red-500/20 bg-input text-foreground focus:border-red-500 focus:ring-red-500"
+                              placeholder="Your full name"
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <Label htmlFor="email" className="text-foreground">Email *</Label>
+                            <Input
+                              id="email"
+                              name="email"
+                              type="email"
+                              required
+                              value={formData.email}
+                              onChange={handleInputChange}
+                              className="border-red-500/20 bg-input text-foreground focus:border-red-500 focus:ring-red-500"
+                              placeholder="your.email@example.com"
+                            />
+                          </div>
+                        </div>
+                        
                         <div className="space-y-2">
-                          <Label htmlFor="name" className="text-foreground">Name *</Label>
+                          <Label htmlFor="subject" className="text-foreground">Subject *</Label>
                           <Input
-                            id="name"
-                            name="name"
+                            id="subject"
+                            name="subject"
                             type="text"
                             required
-                            value={formData.name}
+                            value={formData.subject}
                             onChange={handleInputChange}
                             className="border-red-500/20 bg-input text-foreground focus:border-red-500 focus:ring-red-500"
-                            placeholder="Your full name"
+                            placeholder="Internship Opportunity / Project Collaboration / etc."
                           />
                         </div>
+                        
                         <div className="space-y-2">
-                          <Label htmlFor="email" className="text-foreground">Email *</Label>
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
+                          <Label htmlFor="message" className="text-foreground">Message *</Label>
+                          <Textarea
+                            id="message"
+                            name="message"
                             required
-                            value={formData.email}
+                            value={formData.message}
                             onChange={handleInputChange}
-                            className="border-red-500/20 bg-input text-foreground focus:border-red-500 focus:ring-red-500"
-                            placeholder="your.email@example.com"
+                            className="border-red-500/20 bg-input text-foreground focus:border-red-500 focus:ring-red-500 min-h-[120px]"
+                            placeholder="Tell me about the opportunity, project, or what you'd like to discuss..."
                           />
                         </div>
+                        
+                        <Button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white btn-modern hover-lift"
+                          size="lg"
+                        >
+                          {isSubmitting ? (
+                            <div className="flex items-center space-x-2">
+                              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                              <span>Sending...</span>
+                            </div>
+                          ) : (
+                            <div className="flex items-center space-x-2">
+                              <Send className="h-4 w-4" />
+                              <span>Send Message</span>
+                            </div>
+                          )}
+                        </Button>
+                      </form>
+                    )}
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Response Time Info */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Card className="glass-card border-blue-500/20 bg-blue-500/5">
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold text-foreground mb-4 flex items-center space-x-2">
+                      <Clock className="h-5 w-5 text-blue-400" />
+                      <span>Response Times</span>
+                    </h4>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Email inquiries:</span>
+                        <span className="font-medium text-blue-400">Within 24 hours</span>
                       </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="subject" className="text-foreground">Subject *</Label>
-                        <Input
-                          id="subject"
-                          name="subject"
-                          type="text"
-                          required
-                          value={formData.subject}
-                          onChange={handleInputChange}
-                          className="border-red-500/20 bg-input text-foreground focus:border-red-500 focus:ring-red-500"
-                          placeholder="Internship Opportunity / Project Collaboration / etc."
-                        />
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">LinkedIn messages:</span>
+                        <span className="font-medium text-blue-400">Same day</span>
                       </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="message" className="text-foreground">Message *</Label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          required
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          className="border-red-500/20 bg-input text-foreground focus:border-red-500 focus:ring-red-500 min-h-[120px]"
-                          placeholder="Tell me about the opportunity, project, or what you'd like to discuss..."
-                        />
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Internship opportunities:</span>
+                        <span className="font-medium text-green-400">Priority response</span>
                       </div>
-                      
-                      <Button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white btn-modern hover-lift"
-                        size="lg"
-                      >
-                        {isSubmitting ? (
-                          <div className="flex items-center space-x-2">
-                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                            <span>Sending...</span>
-                          </div>
-                        ) : (
-                          <div className="flex items-center space-x-2">
-                            <Send className="h-4 w-4" />
-                            <span>Send Message</span>
-                          </div>
-                        )}
-                      </Button>
-                    </form>
-                  )}
-                </CardContent>
-              </Card>
-            </motion.div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
 
             {/* Contact Information */}
             <motion.div
@@ -345,30 +377,6 @@ export function ContactPage() {
                   );
                 })}
               </div>
-
-              {/* Response Time Info */}
-              <Card className="glass-card border-blue-500/20 bg-blue-500/5">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-foreground mb-4 flex items-center space-x-2">
-                    <Clock className="h-5 w-5 text-blue-400" />
-                    <span>Response Times</span>
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Email inquiries:</span>
-                      <span className="font-medium text-blue-400">Within 24 hours</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">LinkedIn messages:</span>
-                      <span className="font-medium text-blue-400">Same day</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Internship opportunities:</span>
-                      <span className="font-medium text-green-400">Priority response</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </motion.div>
           </div>
         </div>

@@ -9,6 +9,36 @@ import { projectImages } from '../utils/projectImages';
 
 const projects = [
 	{
+		id: 15,
+		title: 'ResellIQ — Resale Price Intelligence',
+		description:
+			'AI-powered pricing tool for secondhand sellers. Describe an item → get eBay comparable listings, price statistics, and an LLM-generated listing title and description.',
+		longDescription:
+			'Price secondhand items correctly when selling online. Describe an item and its condition — ResellIQ searches eBay\'s Browse API for comparable active listings, computes price statistics (median, average, min, max), and an LLM (GPT-4o-mini via GitHub Models) factors in condition to recommend a price range plus a generated, ready-to-paste listing title and description. Built with a cache-aside Redis pattern (identical searches served instantly with a "⚡ Cached" badge), a fixed-size worker pool (3 replicas — demonstrating deliberate scaling judgment), and a FastAPI gateway orchestrating the pipeline. Containerized with Docker Compose for local dev and Kubernetes (Minikube) for production-like deployment.',
+		tech: ['React', 'FastAPI', 'Redis', 'PostgreSQL', 'Docker', 'Kubernetes', 'eBay API', 'GitHub Models (GPT-4o-mini)'],
+		category: 'Full-Stack',
+		githubUrl: 'https://github.com/ApurboBarua17/resell-iq',
+		liveUrl: '#',
+		featured: true,
+		image: projectImages.reselliq,
+		imageAlt: 'ResellIQ dashboard showing eBay comparable listings, price statistics, and AI-generated listing copy',
+	},
+	{
+		id: 16,
+		title: 'AgriSense — Crop Disease & Market Intelligence',
+		description:
+			'Hackathon-winning AI agent that identifies crop diseases from photos and provides USDA-grounded treatment advice plus market sell-timing intelligence.',
+		longDescription:
+			'Built for the Agents League 2026 hackathon (Reasoning Agents track). A farmer uploads a crop photo → FastAPI gateway pushes the job to a Redis queue → KEDA detects the queue and scales the disease-detector pod from 0→1 automatically → a HuggingFace plant-disease model identifies the disease → Azure AI Foundry (Foundry IQ) retrieves USDA-grounded treatment recommendations with citations → Meta Prophet + USDA NASS API forecasts the crop market price → results stored in PostgreSQL and displayed in a Streamlit UI. KEDA-based Redis autoscaling means pods scale 0→10 based on actual queue depth — zero idle compute during off-season, instant capacity during harvest spikes.',
+		tech: ['Python', 'Kubernetes', 'KEDA', 'Azure AI Foundry', 'HuggingFace', 'Meta Prophet', 'FastAPI', 'Streamlit'],
+		category: 'AI/ML',
+		githubUrl: 'https://github.com/ApurboBarua17/agrisense',
+		liveUrl: '#',
+		featured: true,
+		image: projectImages.agrisense,
+		imageAlt: 'AgriSense platform showing crop disease diagnosis, treatment recommendations, and market price forecast',
+	},
+	{
 		id: 1,
 		title: 'Delta Chi Alumni Platform',
 		description:
