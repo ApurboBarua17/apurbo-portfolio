@@ -2,15 +2,27 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
+const base = process.env.VERCEL ? '/' : '/apurbo-portfolio/';
+
+// Inline plugin to replace %BASE_URL% in index.html at build time
+function htmlBaseUrlPlugin() {
+  return {
+    name: 'html-base-url',
+    transformIndexHtml(html: string) {
+      return html.replace(/%BASE_URL%/g, base);
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), htmlBaseUrlPlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/apurbo-portfolio/',
+  base,
   build: {
     outDir: 'dist',
     sourcemap: false,

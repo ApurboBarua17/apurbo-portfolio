@@ -4,12 +4,13 @@ import { Download, Eye, Mail, Phone, MapPin, Linkedin, Github, Calendar } from '
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import { assetPath } from '../utils/assetPath';
 
 type ResumeMode = 'swe' | 'ml';
 
 const resumeConfig = {
 	swe: {
-		pdfPath: '/apurbo-portfolio/RESUME_APURBO_SWE_GRAD.pdf',
+		pdfPath: assetPath('RESUME_APURBO_SWE_GRAD.pdf'),
 		downloadName: 'Apurbo_Barua_SWE_Resume.pdf',
 		subtitle: 'Software Engineer | CS Graduate @ University of Arizona | Full-Stack Developer',
 		skills: [
@@ -81,7 +82,7 @@ const resumeConfig = {
 		],
 	},
 	ml: {
-		pdfPath: '/apurbo-portfolio/RESUME_APURBO_ML_GRAD.pdf',
+		pdfPath: assetPath('RESUME_APURBO_ML_GRAD.pdf'),
 		downloadName: 'Apurbo_Barua_ML_Resume.pdf',
 		subtitle: 'AI/ML Engineer | CS Graduate @ University of Arizona | Data Scientist',
 		skills: [

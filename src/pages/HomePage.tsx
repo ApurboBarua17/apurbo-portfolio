@@ -8,6 +8,7 @@ import { Badge } from '../components/ui/badge';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { ScrollAnimation, StaggerAnimation } from '../components/ScrollAnimation';
 import { projectImages } from '../utils/projectImages';
+import { assetPath } from '../utils/assetPath';
 
 export function HomePage() {
   const [imageError, setImageError] = useState(false);
@@ -25,7 +26,7 @@ export function HomePage() {
       issuer: 'IBM',
       date: 'Jul 2025',
       credentialId: 'JFRCITYL2F8Y',
-      logo: '/apurbo-portfolio/ibm-logo.png', // You'll need to add this logo to your public folder
+      logo: assetPath('ibm-logo.png'), // You'll need to add this logo to your public folder
       link: 'https://www.coursera.org/account/accomplishments/specialization/JFRCITYL2F8Y?trk=public_profile_see-credential'
     },
     {
@@ -33,7 +34,7 @@ export function HomePage() {
       issuer: 'Amazon Web Services',
       date: 'Jun 2025',
       credentialId: 'RDY70QW0WKPI',
-      logo: '/apurbo-portfolio/aws-logo.png', // You'll need to add this logo to your public folder
+      logo: assetPath('aws-logo.png'), // You'll need to add this logo to your public folder
       link: 'https://www.coursera.org/account/accomplishments/verify/RDY70QW0WKPI?trk=public_profile_see-credential'
     },
     {
@@ -41,7 +42,7 @@ export function HomePage() {
       issuer: 'Amazon Web Services',
       date: 'Jun 2025',
       credentialId: 'W00TNWDF4MA9',
-      logo: '/apurbo-portfolio/aws-logo.png', // You'll need to add this logo to your public folder
+      logo: assetPath('aws-logo.png'), // You'll need to add this logo to your public folder
       link: 'https://www.coursera.org/account/accomplishments/specialization/W00TNWDF4MA9?trk=public_profile_see-credential'
     },
   ];
@@ -210,7 +211,7 @@ export function HomePage() {
                   <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-red-500/10 to-red-600/20">
                     {!imageError ? (
                       <ImageWithFallback
-                        src="/apurbo-portfolio/apurbo.jpeg"
+                        src={assetPath('apurbo.jpeg')}
                         alt="Apurbo Barua"
                         className="w-full h-full object-cover object-center scale-110 hover:scale-115 transition-transform duration-500"
                         onError={() => setImageError(true)}

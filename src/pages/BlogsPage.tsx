@@ -3,6 +3,7 @@ import { Calendar } from 'lucide-react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { ScrollAnimation, StaggerAnimation } from '../components/ScrollAnimation';
+import { assetPath } from '../utils/assetPath';
 
 const blogPosts = [
   {
@@ -11,7 +12,7 @@ const blogPosts = [
     excerpt: "Closed out the spring with a sun-soaked trip to Key West. Watched sunsets at Mallory Square, kayaked through mangroves, and ate way too much conch — the perfect post-grad reset before the next chapter.",
     date: "2026-05-28",
     tags: ["Travel", "Florida", "Post-Grad"],
-    imageUrl: "/apurbo-portfolio/key_west_florida.jpg"
+    imageUrl: assetPath('key_west_florida.jpg')
   },
   {
     id: 102,
@@ -19,7 +20,7 @@ const blogPosts = [
     excerpt: "Spent an afternoon at the Museum of Modern Art on day two in NYC. Picasso, Warhol, and Van Gogh's Starry Night in person — a slower, quieter end to a high-energy trip.",
     date: "2026-05-21",
     tags: ["Travel", "Art", "New York"],
-    imageUrl: "/apurbo-portfolio/moma_art_gallery_nyc.jpg"
+    imageUrl: assetPath('moma_art_gallery_nyc.jpg')
   },
   {
     id: 103,
@@ -27,7 +28,7 @@ const blogPosts = [
     excerpt: "Another shot from MoMA — the building itself is a piece of art. Wandered between floors taking in modern installations and rotating exhibits before heading back uptown.",
     date: "2026-05-21",
     tags: ["Travel", "New York", "Museum"],
-    imageUrl: "/apurbo-portfolio/moma_nyc.jpg"
+    imageUrl: assetPath('moma_nyc.jpg')
   },
   {
     id: 104,
@@ -35,7 +36,7 @@ const blogPosts = [
     excerpt: "First night in NYC and Times Square delivered — billboards stacked on billboards, traffic that never stops, and the kind of energy you can only feel standing in the middle of it. Pure sensory overload in the best way.",
     date: "2026-05-20",
     tags: ["Travel", "New York", "Adventure"],
-    imageUrl: "/apurbo-portfolio/times_square_nyc.jpg"
+    imageUrl: assetPath('times_square_nyc.jpg')
   },
   {
     id: 105,
@@ -43,7 +44,7 @@ const blogPosts = [
     excerpt: "Walked the Brooklyn Bridge at golden hour with the Manhattan skyline glowing behind us. One of those moments where the city actually slows down for a second — easily a highlight of the New York trip.",
     date: "2026-05-20",
     tags: ["Travel", "New York", "Photography"],
-    imageUrl: "/apurbo-portfolio/brooklyn_bridge_nyc.jpg"
+    imageUrl: assetPath('brooklyn_bridge_nyc.jpg')
   },
   {
     id: 106,
@@ -51,7 +52,7 @@ const blogPosts = [
     excerpt: "Stood at the South Rim and just stared. Photos do not do this place justice — the scale of it is humbling. A perfect detour to round out a weekend of Arizona exploration.",
     date: "2026-05-17",
     tags: ["Travel", "Arizona", "Nature"],
-    imageUrl: "/apurbo-portfolio/grand_canyon.jpg"
+    imageUrl: assetPath('grand_canyon.jpg')
   },
   {
     id: 107,
@@ -59,7 +60,7 @@ const blogPosts = [
     excerpt: "Spent a weekend chasing red rocks in Sedona. Hiked Cathedral Rock at sunrise, stopped at every roadside vista, and ended the day at a small cafe in town. Arizona has no shortage of postcard moments.",
     date: "2026-05-17",
     tags: ["Travel", "Arizona", "Hiking"],
-    imageUrl: "/apurbo-portfolio/sedona.jpg"
+    imageUrl: assetPath('sedona.jpg')
   },
   {
     id: 108,
@@ -67,7 +68,7 @@ const blogPosts = [
     excerpt: "Crossed the stage and celebrated with the people who got me here. Caps in the air, group photos until our cheeks hurt — a wrap on four unforgettable years at the U of A.",
     date: "2026-05-15",
     tags: ["Graduation", "Friends", "Milestone"],
-    imageUrl: "/apurbo-portfolio/grad_commencement_friends.jpg"
+    imageUrl: assetPath('grad_commencement_friends.jpg')
   },
   {
     id: 109,
@@ -75,7 +76,7 @@ const blogPosts = [
     excerpt: "The traditional Old Main shot. Standing in front of the building that has watched generations of Wildcats walk by — a small but meaningful moment to mark the end of my undergrad journey.",
     date: "2026-05-15",
     tags: ["Graduation", "University of Arizona", "Milestone"],
-    imageUrl: "/apurbo-portfolio/grad_old_main.jpg"
+    imageUrl: assetPath('grad_old_main.jpg')
   },
   {
     id: 110,
@@ -83,7 +84,7 @@ const blogPosts = [
     excerpt: "Caught a quiet morning at one of San Diego's beaches before the crowds arrived. Cool Pacific breeze, soft sand, and a long walk along the shoreline — exactly the recharge I needed mid-semester.",
     date: "2026-03-15",
     tags: ["Travel", "Beach", "California"],
-    imageUrl: "/apurbo-portfolio/san_diego_beach.jpg"
+    imageUrl: assetPath('san_diego_beach.jpg')
   },
   {
     id: 111,
@@ -91,7 +92,7 @@ const blogPosts = [
     excerpt: "Drove out to San Diego with friends for a spring break getaway. Tacos, beach days, the USS Midway, and a lot of laughs — a much-needed break from coursework and a chance to make some great memories.",
     date: "2026-03-14",
     tags: ["Travel", "Friends", "California"],
-    imageUrl: "/apurbo-portfolio/san_diego_friends.jpg"
+    imageUrl: assetPath('san_diego_friends.jpg')
   },
   {
     id: 112,
@@ -99,7 +100,7 @@ const blogPosts = [
     excerpt: "Spent New Year's Day at Chittagong Naval — quiet sea, family time, and a much-needed reconnection with home. A grounding way to open 2026 before flying back for the spring semester.",
     date: "2026-01-01",
     tags: ["Travel", "Family", "Bangladesh"],
-    imageUrl: "/apurbo-portfolio/bangladesh_chittagong.jpg"
+    imageUrl: assetPath('bangladesh_chittagong.jpg')
   },
   {
     id: 113,
@@ -107,7 +108,7 @@ const blogPosts = [
     excerpt: "Made it to the last home game of the season as a senior — the band, the cardinal-and-navy crowd, and one final 'Bear Down' chant from the student section. A bittersweet send-off to four years at Arizona Stadium.",
     date: "2025-11-15",
     tags: ["University of Arizona", "Sports", "Senior Year"],
-    imageUrl: "/apurbo-portfolio/last_ua_home_game.jpg"
+    imageUrl: assetPath('last_ua_home_game.jpg')
   },
   {
     id: 114,
@@ -115,7 +116,7 @@ const blogPosts = [
     excerpt: "Met up with friends downtown for a birthday dinner — good food, great company, and the kind of laughter that makes a Tuesday feel like a weekend. Small moments like these are what college is really about.",
     date: "2025-08-15",
     tags: ["Friends", "Tucson", "Celebration"],
-    imageUrl: "/apurbo-portfolio/friends_bday_tucson.jpg"
+    imageUrl: assetPath('friends_bday_tucson.jpg')
   },
   {
     id: 1,
@@ -123,7 +124,7 @@ const blogPosts = [
     excerpt: "Starting the new academic year with our incoming RA staff for Fall 2025. Looking forward to working with this dedicated team to support our Apache Santa Cruz residents.",
     date: "2025-08-22",
     tags: ["Leadership", "ResLife", "Community"],
-    imageUrl: "/apurbo-portfolio/RAStaff2025.JPG"
+    imageUrl: assetPath('RAStaff2025.JPG')
   },
   {
     id: 2,
@@ -131,7 +132,7 @@ const blogPosts = [
     excerpt: "Beginning my role as Resident Assistant for the 2025-2026 academic year at Apache Santa Cruz. Ready to support residents and build a positive community environment.",
     date: "2025-08-19",
     tags: ["RA", "ResLife", "Community"],
-    imageUrl: "/apurbo-portfolio/RAintroduction.PNG"
+    imageUrl: assetPath('RAintroduction.PNG')
   },
   {
     id: 3,
@@ -139,7 +140,7 @@ const blogPosts = [
     excerpt: "Wrapping up the academic year with our final wing meeting. Reflecting on the community we built and wishing our residents success in their future endeavors.",
     date: "2025-05-09",
     tags: ["ResLife", "Community", "Reflection"],
-    imageUrl: "/apurbo-portfolio/last_wing_meeting.JPG"
+    imageUrl: assetPath('last_wing_meeting.JPG')
   },
   {
     id: 4,
@@ -147,7 +148,7 @@ const blogPosts = [
     excerpt: "Attending the Delta Chi centennial banquet celebrating 100 years of brotherhood. Connected with alumni and reflected on our fraternity's history and impact.",
     date: "2025-05-03",
     tags: ["Delta Chi", "Fraternity", "Milestone"],
-    imageUrl: "/apurbo-portfolio/rechartering.jpg"
+    imageUrl: assetPath('rechartering.jpg')
   },
   {
     id: 5,
@@ -155,7 +156,7 @@ const blogPosts = [
     excerpt: "Our RA staff received the Staff of the Year award at the annual RA banquet. Proud to be part of a team recognized for dedication to resident support.",
     date: "2025-04-15",
     tags: ["Achievement", "ResLife", "Recognition"],
-    imageUrl: "/apurbo-portfolio/RAbanquetBestStaff.jpg"
+    imageUrl: assetPath('RAbanquetBestStaff.jpg')
   },
   {
     id: 6,
@@ -163,7 +164,7 @@ const blogPosts = [
     excerpt: "Organized our spring scholarship dinner recognizing Delta Chi brothers who made Dean's List. Celebrating academic achievement with dinner at Red Lobster.",
     date: "2025-03-20",
     tags: ["Delta Chi", "Academics", "Achievement"],
-    imageUrl: "/apurbo-portfolio/Spring2025AcademicBanquet.JPG"
+    imageUrl: assetPath('Spring2025AcademicBanquet.JPG')
   },
   {
     id: 7,
@@ -171,7 +172,7 @@ const blogPosts = [
     excerpt: "Completed a software engineer shadowing program at Microsoft in February. Gained valuable insights into the tech industry and software development practices.",
     date: "2025-02-15",
     tags: ["Career", "Technology", "Microsoft"],
-    imageUrl: "/apurbo-portfolio/MicrosoftShadow.jpg"
+    imageUrl: assetPath('MicrosoftShadow.jpg')
   },
   {
     id: 8,
@@ -179,7 +180,7 @@ const blogPosts = [
     excerpt: "Hosted our fall semester scholarship dinner at Outback Steakhouse to recognize brothers who achieved Dean's List status during the semester.",
     date: "2024-11-10",
     tags: ["Delta Chi", "Academics", "Celebration"],
-    imageUrl: "/apurbo-portfolio/Fall2024AcademicBanquet.JPG"
+    imageUrl: assetPath('Fall2024AcademicBanquet.JPG')
   },
   {
     id: 9,
@@ -187,7 +188,7 @@ const blogPosts = [
     excerpt: "Spent the summer of 2024 visiting family in Bangladesh. Reconnected with my roots, explored cultural heritage, and experienced the vibrant life of Dhaka and surrounding areas.",
     date: "2024-07-15",
     tags: ["Travel", "Culture", "Family"],
-    imageUrl: "/apurbo-portfolio/Summer24Bangladesh.jpg"
+    imageUrl: assetPath('Summer24Bangladesh.jpg')
   },
   {
     id: 10,
@@ -195,7 +196,7 @@ const blogPosts = [
     excerpt: "Started the Fall 2024 semester with RA staff orientation and team building. Preparing to support Apache Santa Cruz residents for the upcoming academic year.",
     date: "2024-08-25",
     tags: ["ResLife", "Leadership", "TeamBuilding"],
-    imageUrl: "/apurbo-portfolio/RA2024.JPG"
+    imageUrl: assetPath('RA2024.JPG')
   },
   {
     id: 11,
@@ -203,7 +204,7 @@ const blogPosts = [
     excerpt: "Participated in our Delta Chi chapter rechartering ceremony. A significant milestone for our chapter as we continue our fraternity's mission and values.",
     date: "2024-05-15",
     tags: ["Delta Chi", "Milestone", "Brotherhood"],
-    imageUrl: "/apurbo-portfolio/rechartering.jpg"
+    imageUrl: assetPath('rechartering.jpg')
   },
   {
     id: 12,
@@ -211,7 +212,7 @@ const blogPosts = [
     excerpt: "Organized our spring scholarship dinner at Mr. Ann's restaurant to recognize Delta Chi brothers who achieved Dean's List honors during the semester.",
     date: "2024-04-10",
     tags: ["Delta Chi", "Academics", "Leadership"],
-    imageUrl: "/apurbo-portfolio/Spring2024Banquet.png"
+    imageUrl: assetPath('Spring2024Banquet.png')
   },
   {
     id: 13,
@@ -219,7 +220,7 @@ const blogPosts = [
     excerpt: "Completed my initiation into Delta Chi fraternity in November 2023. Officially became a brother and began my journey with the chapter.",
     date: "2023-11-15",
     tags: ["Delta Chi", "Brotherhood", "Personal"],
-    imageUrl: "/apurbo-portfolio/BecomingMember.jpg"
+    imageUrl: assetPath('BecomingMember.jpg')
   },
   {
     id: 14,
@@ -227,7 +228,7 @@ const blogPosts = [
     excerpt: "Visited San Francisco during spring break 2023 with friends. Explored the Golden Gate Bridge, Fisherman's Wharf, and various neighborhoods throughout the city.",
     date: "2023-03-15",
     tags: ["Travel", "Friends", "Adventure"],
-    imageUrl: "/apurbo-portfolio/SanFransisco.png"
+    imageUrl: assetPath('SanFransisco.png')
   }
 ];
 
